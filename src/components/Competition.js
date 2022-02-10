@@ -1,21 +1,25 @@
 import React from 'react';
+import Competitor from './Competitor';
+import competitorImageBatman from '../images/batman.jpeg'
+import competitorImageApplepie from '../images/apple-pie.jpeg'
+import data from '../testData/data.json'
 
 
 function Competition() {
     return (
         <div>
             <div className="competition-wrapper">
-                <div className="competitor-container">
-                    
-                </div>
-                <div>
-                    <h3 class="competition-text">vs.</h3>
-                </div>
-                <div className="competitor-container">
+                {
+                    data.map(item => {
+                        return (
 
-                </div>
+                            <div className="competitor-container">
+                                <Competitor competitorInfo={item} key={item.id} />
+                            </div>
+                        )
+                    })
+                }
             </div>
-            
         </div>
     );
 }

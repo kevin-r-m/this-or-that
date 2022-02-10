@@ -1,6 +1,9 @@
 import './App.css';
 import Competition from './components/Competition';
+import Leaderboard from './components/Leaderboard';
 import Nav from './components/Nav';
+import data from './testData/data.json'
+
 
 function App() {
   return (
@@ -11,6 +14,7 @@ function App() {
       </header>
       <body>
         <Competition />
+        <Leaderboard data={data}/>
       </body>
     </div>
   );
