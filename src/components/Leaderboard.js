@@ -8,17 +8,17 @@ function Leaderboard({data}) {
             <table>
                 <tbody>
                     <tr>
-                        <th>
+                        <th class="border border-right-0 pl-2">
                             Competitor Name
                         </th>
-                        <th>
+                        <th class="border pl-2">
                             Wins
                         </th>
-                        <th>
-                            Losses
+                        <th class="border pl-2">
+                            Loss
                         </th>
-                        <th>
-                            Total votes
+                        <th class="border pl-2">
+                            Votes
                         </th>
                     </tr>
                     {data.map(item => {

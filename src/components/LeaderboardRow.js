@@ -6,16 +6,16 @@ function LeaderboardRow(competitorInfo) {
     
     return (
         <tr>
-            <td>
+            <td class="border">
                 {competitorInfo.name}
             </td>
-            <td>
+            <td class="border">
                 {competitorInfo.wins}
             </td>
-            <td>
+            <td class="border">
                 {competitorInfo.losses}
             </td>
-            <td>
+            <td class="border">
                 {competitorInfo.totalVotes}
             </td>
         </tr>

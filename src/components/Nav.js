@@ -1,26 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function nav() {
+function Nav() {
     return (
         <div>
             <nav class="nav-bar">
                 <div class="nav-list">
-                    <div class="nav-item">
-                        Competition
-                    </div>
+                    <Link class="nav-item" to={'/'}>Competition</Link>
                     <div class="nav-item">
                         Competitors
                     </div>
-                    <div class="nav-item">
-                        Leaderboards
-                    </div>
-                    <div class="nav-item">
-                        My Account
-                    </div>
+                    <Link class="nav-item" to={'/leaderboards'}>Leaderboards</Link>
                 </div>
             </nav>
+            
         </div>
     );
 }
 
-export default nav;
+export default Nav;
