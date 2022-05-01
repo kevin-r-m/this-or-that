@@ -1,6 +1,8 @@
 import React, {useRef} from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/nav.scss'
+import collapseIcon from '../images/collapse-arrow.png'
+import expandIcon from '../images/expand-arrow.png'
 
 function Nav(props) {
 
@@ -8,13 +10,13 @@ function Nav(props) {
         e.preventDefault();
         const toggleRef = props.elementRef.current
         if(props.active === ' hide'){
-            toggleRef.innerHTML = '-'
+            toggleRef.src = collapseIcon
             props.setPosition('');
             props.setActive('');
             return
         }
         props.setActive(' hide');
-        toggleRef.innerHTML = '+'
+        toggleRef.src = expandIcon
         props.setPosition(' shift-up');
 
 
@@ -30,7 +32,7 @@ function Nav(props) {
                         Competitors
                     </div>
                     <Link class="nav-item" to={'/leaderboards'}>Leaderboards</Link>
-                    <a href="#" className="nav-toggle" ref={props.elementRef} onClick={handleClick}>-</a>
+                    <a href="#" className="nav-toggle" onClick={handleClick}><img ref={props.elementRef} src={collapseIcon} alt="collapse" /></a>
                 </div>
             </nav>
             

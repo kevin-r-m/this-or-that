@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import Nav from './Nav';
 import '../styles/header.scss'
+import expandIcon from '../images/expand-arrow.png'
 
 function Header(props) {
 
@@ -11,7 +12,7 @@ function Header(props) {
             setActive(' hide');
             const toggleRef = elementRef.current
             props.setPosition(' shift-up')
-            toggleRef.innerHTML = '+'
+            toggleRef.src = expandIcon
         }, 3000)
     }, [])
 
