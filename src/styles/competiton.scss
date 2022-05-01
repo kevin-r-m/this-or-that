@@ -1,0 +1,22 @@
+.competition-wrapper {
+    margin: 0 15vw;
+    flex-wrap: wrap;
+  }
+  
+.competition-text {
+text-align: center;
+}
+
+.competitor-details {
+display: none;
+}
+
+.versus-text-wrapper {
+text-align: center;
+
+p {
+    margin: 0.5rem;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+}

@@ -1,0 +1,26 @@
+#root {
+    background-color: rgba(171, 233, 255, 0.534);
+  }
+  
+.main-container {
+  height: 100%;
+  transition: all .5s;
+  position: relative;
+  top: 0;
+
+  &.shift-up {
+    top: -40px;
+  }
+
+}
+
+.body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin: 0 10vw;
+    
+  }
+

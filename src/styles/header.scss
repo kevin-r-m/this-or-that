@@ -1,0 +1,20 @@
+.app-header {
+    background-color: rgba(0, 128, 128, 0.487);
+    width: 100%;
+    padding-top: 10px;
+    position: relative;
+    transition: all .5s;
+    top: 0;
+  }
+  
+  .page-title {
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: bold;
+  }
+
+  .hide {
+    top: -38px;
+  }

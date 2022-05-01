@@ -1,5 +1,6 @@
 import React from 'react';
 import LeaderboardRow from './LeaderboardRow';
+import '../styles/leaderboard.scss'
 
 function Leaderboard({data}) {
     return (

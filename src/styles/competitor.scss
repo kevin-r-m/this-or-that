@@ -1,0 +1,57 @@
+.competitor-container {
+
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    
+
+    .more-info {
+      font-size: .9rem;
+        margin: 0;
+        padding: 5px 0;
+        background-color: rgba(0, 128, 128, 0.487);
+        border: 2px solid #5BA1A2;
+        border-bottom: 0;
+        font-weight: 700;
+    }
+
+    .competitor-image-wrapper{
+        text-align: center;
+        background-color: #00000029;
+        padding: 8px 0;
+        border: 2px solid #5BA1A2;
+
+        img {
+          width: 75%;
+          border: 3px solid #8cf5f7;
+        }
+      
+      }
+}
+
+.competitor-title {
+    font-size: 1.2rem;
+    padding: 8px 0;
+    text-align: center;
+  
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+  }
+
+.competitor-title-wrapper {
+    align-items: center;
+
+  }
+  
+  .competitor-description-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    // padding: 10px;
+    // max-width: 225px;
+    height: 196px;
+    // overflow-wrap: normal;
+    overflow: auto;
+  }
