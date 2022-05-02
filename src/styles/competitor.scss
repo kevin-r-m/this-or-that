@@ -7,13 +7,11 @@
     
 
     .more-info-toggle {
-      font-size: .9rem;
       margin: 0;
-      padding: 5px 0;
-      background-color: rgba(0, 128, 128, 0.487);
-      border: 2px solid #5BA1A2;
-      border-bottom: 0;
       font-weight: 700;
+      cursor: pointer;
+      line-height: 1.7;
+      font-size: .9rem;
     }
 
     
@@ -57,14 +55,32 @@
     }
 }
 
+.vote-button {
+    margin-top: 2px;
+    margin-bottom: 0;
+    font-weight: 600;
+    background-color: #00000066;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 11px;
+    color: #8bf4f6;
+}
+
 .competitor-title {
+    padding: 4px 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(0, 128, 128, 0.487);
+    border: 2px solid #5BA1A2;
+    border-bottom: 0;
     font-size: 1.2rem;
-    padding-bottom: 8px;
-    text-align: center;
+    text-align: left;
   
     h3 {
         margin-top: 0;
         margin-bottom: 0;
+        line-height: 1;
     }
   }
 

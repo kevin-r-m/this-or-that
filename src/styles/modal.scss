@@ -1,0 +1,18 @@
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.322);
+}
+
+.modal-container {
+    background-color: white;
+    padding: 10px 20px;
+    min-width: 300px;
+    min-height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
