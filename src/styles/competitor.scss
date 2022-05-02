@@ -3,30 +3,58 @@
     margin: 0;
     width: 100%;
     text-align: center;
+    position: relative;
     
 
-    .more-info {
+    .more-info-toggle {
       font-size: .9rem;
-        margin: 0;
-        padding: 5px 0;
-        background-color: rgba(0, 128, 128, 0.487);
-        border: 2px solid #5BA1A2;
-        border-bottom: 0;
-        font-weight: 700;
+      margin: 0;
+      padding: 5px 0;
+      background-color: rgba(0, 128, 128, 0.487);
+      border: 2px solid #5BA1A2;
+      border-bottom: 0;
+      font-weight: 700;
     }
 
+    
     .competitor-image-wrapper{
-        text-align: center;
-        background-color: #00000029;
-        padding: 8px 0;
-        border: 2px solid #5BA1A2;
-
-        img {
-          width: 75%;
-          border: 3px solid #8cf5f7;
-        }
+      text-align: center;
+      background-color: #00000029;
+      padding: 8px 0;
+      border: 2px solid #5BA1A2;
       
+      img {
+        width: 75%;
+        border: 3px solid #8cf5f7;
       }
+      
+    }
+    .more-info-container {
+      position: absolute;
+      display: flex;
+      margin: 0 auto;
+      height: 0;
+      text-align: left;
+      background-color: #AFCCD6;
+      overflow: hidden;
+      padding: 0 5px;
+      transition: all .5s;
+      border: 2px solid #5BA1A2;
+
+
+
+      &.show {
+        height: 60%;
+        box-shadow: 0px 8px 10px #00000030;
+      }
+
+      .more-info-body {
+        background-color: #d5dcdf;
+        padding: 5px;
+        border-radius: 5px;
+        align-self: center;
+      }
+    }
 }
 
 .competitor-title {
