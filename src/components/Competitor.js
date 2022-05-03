@@ -19,6 +19,7 @@ function Competitor(props) {
 
     function openModal(e){
         e.preventDefault();
+        props.setSelectedCompetitor(e.target.dataset.competitor);
         props.setModalShowState(!props.modalShowState);
     }
 
@@ -36,7 +37,7 @@ function Competitor(props) {
             <div className="competitor-image-wrapper">
                     <img src={props.competitorInfo.image} alt="batman" />
                 <div className="voting-container">
-                    <button className="vote-button" onClick={openModal}>Cast vote for {props.competitorInfo.name}</button>
+                    <button className="vote-button" onClick={openModal} data-competitor={props.competitorInfo.name}>Cast vote for {props.competitorInfo.name}</button>
                 </div>
             </div>
         </div>

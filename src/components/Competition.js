@@ -7,10 +7,12 @@ import VoteConfirmation from './modals/VoteConfirmation';
 function Competition() {
     
     const [modalShowState, setModalShowState] = useState(false);
+    const [selectedCompetitor, setSelectedCompetitor] = useState('');
 
     return (
         <div className={"competition-wrapper"}>
             <Competitor 
+            setSelectedCompetitor={setSelectedCompetitor}
             competitorInfo={data[0]}
             setModalShowState={setModalShowState}
             modalShowState={modalShowState}
@@ -21,6 +23,7 @@ function Competition() {
             </div>
 
             <Competitor 
+            setSelectedCompetitor={setSelectedCompetitor}
             competitorInfo={data[1]}
             setModalShowState={setModalShowState}
             modalShowState={modalShowState}
@@ -29,7 +32,8 @@ function Competition() {
                 modalShowState ? 
 
                 <div>
-                    <VoteConfirmation 
+                    <VoteConfirmation
+                    selectedCompetitor={selectedCompetitor}
                     setModalShowState={setModalShowState}
                     modalShowState={modalShowState}/>
                 </div>

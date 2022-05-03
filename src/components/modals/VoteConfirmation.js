@@ -10,9 +10,13 @@ function VoteConfirmation(props) {
 
     return (
         <div className="modal-container">
-            <h3 className="modal-header">No turning back!</h3>
-            <button onClick={modalClose}>x</button>
-            <p>You are about to cast your vote for Batman, there is no going back so please confirm below.</p>
+            <h3 className="modal-header">You chose {props.selectedCompetitor}!</h3>
+            <div className="modal-body">
+                <button onClick={modalClose}>x</button>
+                <p>Lock it in below or take another look.</p>
+                <button>Lock it in</button>
+                <button>Close</button>
+            </div>
         </div>
     );
 }
