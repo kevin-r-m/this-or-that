@@ -10,12 +10,16 @@ function VoteConfirmation(props) {
 
     return (
         <div className="modal-container">
-            <h3 className="modal-header">You chose {props.selectedCompetitor}!</h3>
+            <div className="modal-header-container">
+                <h3 className="modal-header">You chose {props.selectedCompetitor}!</h3>
+                <button className="modal-close" onClick={modalClose}></button>
+            </div>
             <div className="modal-body">
-                <button onClick={modalClose}>x</button>
                 <p>Lock it in below or take another look.</p>
+            </div>
+            <div className="modal-selections">
                 <button>Lock it in</button>
-                <button>Close</button>
+                <button onClick={modalClose}>Take another look</button>
             </div>
         </div>
     );
