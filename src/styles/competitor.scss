@@ -24,6 +24,14 @@
       img {
         width: 75%;
         border: 3px solid #8cf5f7;
+
+        @media(min-width: 767px){
+          width: 94%;
+          padding: 5px;
+          margin: 0 7px;
+          height: 380px;
+          background-color: #709191;
+        }
       }
       
     }
@@ -51,7 +59,26 @@
         padding: 5px;
         border-radius: 5px;
         align-self: center;
+
+        a {
+          display: block;
+          margin-bottom: 5px;
+          margin-top: 15px;
+          font-weight: 450;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        @media(min-width: 767px){
+          padding: 10px;
+        }
       }
+    }
+
+    @media(min-width: 767px){
+      width: 42%;
     }
 }
 
@@ -64,6 +91,15 @@
     border-radius: 5px;
     padding: 5px 11px;
     color: #8bf4f6;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #00000091;
+    }
+
+    @media(min-width: 767px){
+      font-size: 1.2rem;
+    }
 }
 
 .competitor-title {

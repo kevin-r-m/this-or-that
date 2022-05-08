@@ -9,19 +9,22 @@ function VoteConfirmation(props) {
     }
 
     return (
-        <div className="modal-container">
-            <div className="modal-header-container">
-                <h3 className="modal-header">You chose {props.selectedCompetitor}!</h3>
-                <button className="modal-close" onClick={modalClose}></button>
+        <>
+            <div className="modal-overlay"></div>
+            <div className="modal-container">
+                <div className="modal-header-container">
+                    <h3 className="modal-header">You chose {props.selectedCompetitor}!</h3>
+                    <button className="modal-close" onClick={modalClose}></button>
+                </div>
+                <div className="modal-body">
+                    <p>Lock it in below or take another look.</p>
+                </div>
+                <div className="modal-selections">
+                    <button>Lock it in</button>
+                    <button onClick={modalClose}>Take another look</button>
+                </div>
             </div>
-            <div className="modal-body">
-                <p>Lock it in below or take another look.</p>
-            </div>
-            <div className="modal-selections">
-                <button>Lock it in</button>
-                <button onClick={modalClose}>Take another look</button>
-            </div>
-        </div>
+        </>
     );
 }
 

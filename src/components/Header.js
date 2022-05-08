@@ -8,12 +8,17 @@ function Header(props) {
     const elementRef = useRef();
 
     useEffect(() => {
-        setTimeout(() => {
-            setActive(' hide');
-            const toggleRef = elementRef.current
-            props.setPosition(' shift-up')
-            toggleRef.src = expandIcon
-        }, 3000)
+        const mobile = 767;
+        const toggleRef = elementRef.current
+        if(window.screen.width < mobile){
+            setTimeout(() => {
+                setActive(' hide');
+                props.setPosition(' shift-up')
+                toggleRef.src = expandIcon
+            }, 2500)
+            return
+        }
+        toggleRef.style.display="none"
     }, [])
 
     const [active, setActive] = useState('');

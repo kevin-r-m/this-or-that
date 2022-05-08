@@ -8,6 +8,7 @@ import { Routes } from 'react-router';
 import Header from './components/Header';
 import './styles/base.scss'
 import './styles/main.scss'
+import './styles/footer.scss'
 
 
 function App() {

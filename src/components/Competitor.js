@@ -32,6 +32,7 @@ function Competitor(props) {
             <div className={"more-info-container" + showInfo}>
                 <p className="more-info-body">
                     {props.competitorInfo.description}
+                    <a href="#">Go to competitor profile</a>
                 </p>
             </div>
             <div className="competitor-image-wrapper">
