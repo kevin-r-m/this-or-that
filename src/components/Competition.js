@@ -18,7 +18,7 @@ function Competition() {
             modalShowState={modalShowState}
             key={1}/>
 
-            <div class="versus-text-wrapper">
+            <div className="versus-text-wrapper">
                 <p>vs.</p>
             </div>
 

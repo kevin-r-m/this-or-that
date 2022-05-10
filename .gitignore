@@ -18,6 +18,8 @@
 .env.test.local
 .env.production.local
 
+.env
+
 server/config.env
 server/node_modules/
 server/.pnp

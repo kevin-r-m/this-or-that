@@ -25,13 +25,11 @@ function Nav(props) {
 
     return (
         <div>
-            <nav class="nav-bar">
-                <div class="nav-list">
-                    <Link class="nav-item" to={'/'}>Competition</Link>
-                    <div class="nav-item">
-                        Competitors
-                    </div>
-                    <Link class="nav-item" to={'/leaderboards'}>Leaderboards</Link>
+            <nav className="nav-bar">
+                <div className="nav-list">
+                    <Link className="nav-item" to={'/'}>Competition</Link>
+                    <Link className="nav-item" to={'/competitors'}>Competitors</Link>
+                    <Link className="nav-item" to={'/leaderboards'}>Leaderboards</Link>
                     <a href="#" className="nav-toggle" onClick={handleClick}><img ref={props.elementRef} src={collapseIcon} alt="collapse" /></a>
                 </div>
             </nav>
