@@ -10,7 +10,7 @@ import './styles/base.scss'
 import './styles/main.scss'
 import './styles/footer.scss'
 import Competitors from './components/Competitors';
-import api from './api'
+import apis from './api'
 
 const schedule = require('node-schedule');
 
@@ -23,7 +23,7 @@ function App() {
   })
 
   const fetchCompetition = schedule.scheduleJob('0 0 * * * *', function(){
-    api.createCompetition();
+    apis.createCompetition();
   });
   
   const [position, setPosition] = useState('');

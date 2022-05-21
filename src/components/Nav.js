@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/nav.scss'
 import collapseIcon from '../images/collapse-arrow.png'
