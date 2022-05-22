@@ -5,6 +5,7 @@
 
     @media(min-width: 767px){
       margin: 0 10rem;
+      margin-top: 5rem;
       flex-direction: row;
       align-items: center;
       justify-content: space-around;
@@ -16,14 +17,15 @@
 }
 
 .competitor-details {
-display: none;
+  display: none;
 }
 
 .versus-text-wrapper {
-text-align: center;
+  text-align: center;
+  margin: 0 auto;
 
-p {
+  p {
     margin: 0.75rem;
     font-weight: bold;
-}
+  }
 }

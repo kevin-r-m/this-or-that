@@ -8,23 +8,28 @@ function Competition() {
     
     const [modalShowState, setModalShowState] = useState(false);
     const [selectedCompetitor, setSelectedCompetitor] = useState('');
-    const [currentDate, setCurrentDate] = useState();
-    const [previousDate, setPreviousDate] = useState();
+    const [currentDate, setCurrentDate] = useState('');
+    const [votedToday, setVotedToday] = useState('');
+    const [localState, setLocalState] = useState('');
 
     useEffect(() => {
-        handleDateUpdates();
+        handleUpdates();
     }, [])
 
-    function handleDateUpdates(){
+    function handleUpdates(){
+        handleDates();
+        setLocalState(window.localStorage.getItem('lastCastDate'));
+        handleLocalCheck();
+    }
+
+    function handleDates(){
         let today = new Date();
         let yesterday = new Date(today);
 
         yesterday.setDate(yesterday.getDate() - 1);
         today = handleDateFormat(today);
-        yesterday = handleDateFormat(yesterday);
 
         setCurrentDate(today);
-        setPreviousDate(yesterday);
     }
 
     function handleDateFormat(date){
@@ -37,7 +42,10 @@ function Competition() {
     }
 
     function handleLocalCheck(){
-        
+        if(localState !== currentDate){
+            setVotedToday(true);
+        }else{setVotedToday(false)}
+
     }
 
     return (
@@ -62,12 +70,12 @@ function Competition() {
             {
                 modalShowState ? 
 
-                <div>
+                <>
                     <VoteConfirmation
                     selectedCompetitor={selectedCompetitor}
                     setModalShowState={setModalShowState}
                     modalShowState={modalShowState}/>
-                </div>
+                </>
 
                 :
 

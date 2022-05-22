@@ -38,6 +38,7 @@
         background-size: 22px;
         background-repeat: no-repeat;
         border: none;
+        cursor: pointer;
         height: 20px;
         position: absolute;
         width: 20px;
@@ -73,6 +74,14 @@
             background-color: black;
             left: 5px;
             width: 93%;
+
+        }
+
+        &:hover {
+
+            &::after {
+                background-color: transparent;
+            }
         }
     }
 

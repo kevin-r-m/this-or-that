@@ -1,3 +1,16 @@
+.tot-logo{
+  max-height: 30px;
+  width: auto;
+  position: absolute;
+  margin-left: 15px;
+
+  @media(min-width: 767px){
+    max-height: 80px;
+    top: 8px;
+    margin-left: 195px;
+  }
+}
+
 .nav-bar {
   margin-bottom: 15px;
 }
@@ -7,7 +20,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    /* margin-top: 5vh; */
     align-content: center;
     
     .nav-toggle {
@@ -25,32 +37,31 @@
   
     .nav-item {
       padding: 10px;
+      padding-bottom: 2px;
       margin: 0;
       max-width: 25vw;
       font-size: .75rem;
       font-weight: bold;
       text-decoration: none;
-      color: black;
-      border-bottom: 5px solid transparent;
+      border-bottom: 4px solid transparent;
+      color: #393D38;
       
       @media(min-width: 776px){
           margin: 0 5rem;
           font-size: 2rem;
           font-weight: bold;
       }
+
+      &.active {
+        border-bottom: 4px solid rgb(180, 151, 89);
+      }
     
       &:hover {
         cursor: pointer;
-        border-bottom: 5px solid rgb(180, 151, 89);
-        color: black;
-      }
-      &:focus {
-        border-bottom: 5px solid rgb(180, 151, 89);
-        color: black;
+        border-bottom: 4px solid rgb(180, 151, 89);
       }
       &:active {
-        border-bottom: 5px solid rgb(180, 151, 89);
-        color: black;
+        border-bottom: 4px solid rgb(180, 151, 89);
       }
     
     }

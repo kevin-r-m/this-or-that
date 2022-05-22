@@ -29,9 +29,9 @@ function App() {
   const [position, setPosition] = useState('');
 
   return (
-    <div className="App">
+    <>
       <Header setPosition={setPosition} />
-      <body className={"main-container" + position}>
+      <body className={"main-container App" + position}>
         <Routes>
           {/* Routing for leaderboard */}
           <Route exact path = '/leaderboards'
@@ -50,7 +50,7 @@ function App() {
       <footer>
         <p className="footnote">Created by Kevin McLaughlin &amp; Matt Lipowski <br/>&copy;2022</p>
       </footer>
-    </div>
+    </>
   );
 }
 

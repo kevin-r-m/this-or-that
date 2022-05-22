@@ -1,5 +1,6 @@
 html {
-    background-color: rgba(171, 233, 255, 0.534);
+  background-color: rgba(227, 222, 210, 0.623);
+  color: #393D38;
   }
   
 .main-container {
@@ -20,6 +21,7 @@ html {
 }
 
 .body {
+    overflow-x: hidden;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
