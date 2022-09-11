@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import '../styles/competitor.scss';
+import batman from '../images/batman.jpeg';
 
 function Competitor(props) {
 
@@ -37,7 +38,7 @@ function Competitor(props) {
                     </div>
                 </div>
                 <div className="competitor-image-wrapper">
-                        <img src={props.competitorInfo.image} alt="batman" />
+                        <img src={batman} alt="batman" />
                     <div className="voting-container">
                         <button className="vote-button" onClick={openModal} data-competitor={props.competitorInfo.name}>Cast vote for {props.competitorInfo.name}</button>
                     </div>

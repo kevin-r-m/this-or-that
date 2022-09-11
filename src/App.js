@@ -17,21 +17,25 @@ const schedule = require('node-schedule');
 
 
 function App() {
+
+  const [competitionData, setCompetitonData] = useState();
   
   useEffect(() => {
     window.scrollTo(0, 0)
-  })
+  }, [])
 
-  const fetchCompetition = schedule.scheduleJob('0 0 * * * *', function(){
-    apis.createCompetition();
-  });
-  
-  const [position, setPosition] = useState('');
+  // const fetchCompetition = schedule.scheduleJob('0 0 * * * *', function(){
+  //   apis.createCompetition();
+  // });
+
+  // setCompetitonData(apis.createCompetition())
+  // console.log(competitionData)
+  apis.createCompetition()
 
   return (
     <>
-      <Header setPosition={setPosition} />
-      <body className={"main-container App" + position}>
+      <Header />
+      <div className={"main-container App"}>
         <Routes>
           {/* Routing for leaderboard */}
           <Route exact path = '/leaderboards'
@@ -46,7 +50,7 @@ function App() {
             />
         </Routes>
 
-      </body>
+      </div>
       <footer>
         <p className="footnote">Created by Kevin McLaughlin &amp; Matt Lipowski <br/>&copy;2022</p>
       </footer>

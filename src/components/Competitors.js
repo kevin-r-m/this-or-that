@@ -15,8 +15,8 @@ function Competitors() {
             {
                 competitorsState.length > 0 ?
 
-                competitorsState.map(competitor => {
-                    return <p>{competitor.name}</p>
+                competitorsState.map((competitor, index)=> {
+                    return <p key={index}>{competitor.name}</p>
                 })
 
                 :

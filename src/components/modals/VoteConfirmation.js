@@ -1,27 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useEffect } from 'react/cjs/react.development';
 import '../../styles/modal.scss'
 
-function VoteConfirmation(props) {
+function VoteConfirmation({handleModal, handleVote, selectedCompetitor, votedToday}) {
 
-    function modalClose(e){
-        e.preventDefault()
-        props.setModalShowState(!props.modalShowState)
-    }
+    const [votedFor, setVotedFor] = useState();
+
+    useEffect(() => {
+        setVotedFor(window.localStorage.getItem('lastVotedFor'));
+    }, [votedToday])
 
     return (
         <>
             <div className="modal-overlay"></div>
             <div className="modal-container">
                 <div className="modal-header-container">
-                    <h3 className="modal-header">{props.selectedCompetitor}</h3>
-                    <button className="modal-close" onClick={modalClose}></button>
+                    <h3 className="modal-header">{selectedCompetitor}</h3>
+                    <button className="modal-close" onClick={handleModal}></button>
                 </div>
                 <div className="modal-body">
-                    <p>Lock it in below or take another look.</p>
+                    {votedToday ? 
+                        <>
+                            <p>Hold your horses, looks like you already voted today.</p> 
+                            <p>You voted for: {votedFor}</p>
+                        </>
+                        : 
+                        <p>Lock it in below or take another look.</p>}
                 </div>
                 <div className="modal-selections">
-                    <button>Lock it in</button>
-                    <button onClick={modalClose}>Not sure actually</button>
+                    <button onClick={handleVote}>Lock it in</button>
+                    <button onClick={handleModal}>Not sure actually</button>
                 </div>
             </div>
         </>

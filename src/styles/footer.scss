@@ -7,10 +7,14 @@ footer {
 
 
     .footnote {
+        bottom: -30px;
         font-size: .5rem;
         text-align: center;
-        margin: 16px;
         font-weight: 600;
+        left: 50%;
+        margin: 0 auto;
+        position: relative;
+        transform: translate(-50%);
 
         @media(min-width: 767px){
             font-size: 1rem;

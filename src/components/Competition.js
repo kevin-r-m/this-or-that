@@ -3,6 +3,7 @@ import Competitor from './Competitor';
 import data from '../testData/data.json'
 import '../styles/competiton.scss'
 import VoteConfirmation from './modals/VoteConfirmation';
+import apis from '../api'
 
 function Competition() {
     
@@ -10,42 +11,65 @@ function Competition() {
     const [selectedCompetitor, setSelectedCompetitor] = useState('');
     const [currentDate, setCurrentDate] = useState('');
     const [votedToday, setVotedToday] = useState('');
-    const [localState, setLocalState] = useState('');
+    const [lastCastDate, setLastCastDate] = useState('');
 
     useEffect(() => {
-        handleUpdates();
-    }, [])
+        updateDates();
+    });
 
-    function handleUpdates(){
-        handleDates();
-        setLocalState(window.localStorage.getItem('lastCastDate'));
-        handleLocalCheck();
+
+    //opening and closing the modal
+    function handleModal(){
+        setModalShowState(!modalShowState);
     }
-
-    function handleDates(){
+    
+    //updates currentDate and localState states
+    function updateDates(){
         let today = new Date();
-        let yesterday = new Date(today);
-
-        yesterday.setDate(yesterday.getDate() - 1);
+        // let yesterday = new Date(today);
+        
+        // yesterday.setDate(yesterday.getDate() - 1);
         today = handleDateFormat(today);
-
+        
         setCurrentDate(today);
+        setLastCastDate(window.localStorage.getItem('lastCastDate'));
     }
-
+    
     function handleDateFormat(date){
         const dd = String(date.getDate());
         const mm = String(date.getMonth() + 1);
         const yyyy = date.getFullYear();
         date = mm + dd + yyyy;
-
+        
         return date;
     }
-
+    
     function handleLocalCheck(){
-        if(localState !== currentDate){
+        if(lastCastDate !== currentDate){
+            setVotedToday(false);
+        }else {
             setVotedToday(true);
-        }else{setVotedToday(false)}
+        }
+    }
+    
+    function handleVote(){
+        handleLocalCheck();
+        if(votedToday){
+            //will need to add handler for sending user failed state
+            return
+        }else{
+            handleModal();
+            updateLastCastDate();
+            setVotedFor();
+        }
+    }
+    
+    function updateLastCastDate(){
+        window.localStorage.setItem('lastCastDate', currentDate)
+    }
 
+    function setVotedFor(){
+        window.localStorage.setItem('lastVotedFor', selectedCompetitor)
     }
 
     return (
@@ -74,7 +98,10 @@ function Competition() {
                     <VoteConfirmation
                     selectedCompetitor={selectedCompetitor}
                     setModalShowState={setModalShowState}
-                    modalShowState={modalShowState}/>
+                    modalShowState={modalShowState}
+                    handleModal={handleModal}
+                    handleVote={handleVote}
+                    votedToday={votedToday}/>
                 </>
 
                 :
