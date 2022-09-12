@@ -11,11 +11,11 @@ function Competitor(props) {
         e.preventDefault();
         if(showInfo === ' show'){
             setShowInfo('');
-            elementRef.current.innerHTML = 'See more info +'
+            elementRef.current.innerHTML = 'See info +'
             return
         }
         setShowInfo(' show');
-        elementRef.current.innerHTML = 'Hide more info -'
+        elementRef.current.innerHTML = 'Hide info -'
     }
 
     function openModal(e){
@@ -29,7 +29,7 @@ function Competitor(props) {
             <div className="competitor-container">
                 <div className="competitor-title">
                     <h3>{props.competitorInfo.name}</h3>
-                    <p className="more-info-toggle" onClick={handleClick} ref={elementRef}>See more info +</p>
+                    <p className="more-info-toggle" onClick={handleClick} ref={elementRef}>See info +</p>
                 </div>
                 <div className={"more-info-container" + showInfo}>
                     <div className="more-info-body">

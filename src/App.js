@@ -2,7 +2,7 @@ import './App.scss';
 import {useState, useEffect} from 'react'
 import Competition from './components/Competition';
 import Leaderboard from './components/Leaderboard';
-import data from './testData/data.json'
+import data from './testData/competitorData.json'
 import { Route } from 'react-router-dom'
 import { Routes } from 'react-router';
 import Header from './components/Header';
@@ -12,13 +12,13 @@ import './styles/footer.scss'
 import Competitors from './components/Competitors';
 import apis from './api'
 
-const schedule = require('node-schedule');
+// const schedule = require('node-schedule');
 
 
 
 function App() {
 
-  const [competitionData, setCompetitonData] = useState();
+  // const [competitionData, setCompetitonData] = useState();
   
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -30,7 +30,7 @@ function App() {
 
   // setCompetitonData(apis.createCompetition())
   // console.log(competitionData)
-  apis.createCompetition()
+  // console.log(apis.createCompetition());
 
   return (
     <>

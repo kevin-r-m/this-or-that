@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Competitor from './Competitor';
-import data from '../testData/data.json'
+import data from '../testData/competitorData.json'
 import '../styles/competiton.scss'
-import VoteConfirmation from './modals/VoteConfirmation';
+import VoteConfirmationModal from './modals/VoteConfirmationModal';
 import apis from '../api'
+import CompetitionMetrics from './CompetitionMetrics';
 
 function Competition() {
     
@@ -15,6 +16,7 @@ function Competition() {
 
     useEffect(() => {
         updateDates();
+        handleLocalCheck();
     });
 
 
@@ -26,15 +28,12 @@ function Competition() {
     //updates currentDate and localState states
     function updateDates(){
         let today = new Date();
-        // let yesterday = new Date(today);
-        
-        // yesterday.setDate(yesterday.getDate() - 1);
         today = handleDateFormat(today);
-        
         setCurrentDate(today);
         setLastCastDate(window.localStorage.getItem('lastCastDate'));
-    }
-    
+    }    
+
+    //puts the date into a concat string
     function handleDateFormat(date){
         const dd = String(date.getDate());
         const mm = String(date.getMonth() + 1);
@@ -44,6 +43,7 @@ function Competition() {
         return date;
     }
     
+    //checks if a user has voted already today
     function handleLocalCheck(){
         if(lastCastDate !== currentDate){
             setVotedToday(false);
@@ -52,8 +52,8 @@ function Competition() {
         }
     }
     
+    //confirms if user has voted, processes vote if not
     function handleVote(){
-        handleLocalCheck();
         if(votedToday){
             //will need to add handler for sending user failed state
             return
@@ -63,16 +63,20 @@ function Competition() {
             setVotedFor();
         }
     }
-    
+
+    //updates localStorage of last date vote casted
     function updateLastCastDate(){
         window.localStorage.setItem('lastCastDate', currentDate)
     }
 
+    //updates localStorage of last item voted for
     function setVotedFor(){
         window.localStorage.setItem('lastVotedFor', selectedCompetitor)
     }
 
     return (
+        <>
+        <CompetitionMetrics />
         <div className={"competition-wrapper"}>
             <Competitor 
             setSelectedCompetitor={setSelectedCompetitor}
@@ -95,7 +99,7 @@ function Competition() {
                 modalShowState ? 
 
                 <>
-                    <VoteConfirmation
+                    <VoteConfirmationModal
                     selectedCompetitor={selectedCompetitor}
                     setModalShowState={setModalShowState}
                     modalShowState={modalShowState}
@@ -109,6 +113,7 @@ function Competition() {
                 null
             }
         </div>
+        </>
     );
 }
 

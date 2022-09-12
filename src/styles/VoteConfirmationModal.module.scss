@@ -1,4 +1,10 @@
-.modal-overlay {
+@use 'utilities/tools.scss';
+
+.lastVotedFor {
+    font-weight: 500;
+}
+
+.modalOverlay {
     height: 100%;
     width: 100%;
     position: fixed;
@@ -7,7 +13,7 @@
     background: rgba(0, 0, 0, 0.322);
 }
 
-.modal-container {
+.modalContainer {
     background-color: white;
     padding: 0;
     min-width: 300px;
@@ -20,19 +26,19 @@
     border: 1px solid black;
 }
 
-.modal-header-container {
+.modalHeaderContainer {
     background-color: rgba(0, 128, 128, 0.487);
     position: relative;
     padding: 10px;
     margin-top: 0;
     border-bottom: 1px solid black;
     
-    .modal-header {
+    .modalHeader {
         text-align: center;
         margin: 5px;
     }
 
-    .modal-close {
+    .modalClose {
         background: none;
         background-image: url('../images/modal-close-icon.svg');
         background-size: 22px;
@@ -48,14 +54,14 @@
 }
 
 
-.modal-body {
+.modalBody {
     padding: 20px;
     padding-top: 0;
     text-align: center;
     margin: 20px 30px 0 30px;
 }
 
-.modal-selections {
+.modalSelections {
     display: flex;
     justify-content: space-around;
 
