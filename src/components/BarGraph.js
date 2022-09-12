@@ -2,17 +2,21 @@ import React, { useRef } from 'react';
 import { useEffect } from 'react/cjs/react.development';
 import styles from '../styles/BarGraph.module.scss'
 
-function BarGraph({name, image, votes}) {
+function BarGraph({name, image, votes, lead}) {
 
     const graphRef = useRef()
 
     useEffect(() => {
         function convertVotes(){
             const votePixels = votes;
-            graphRef.current.setAttribute('style', `width: ${votePixels}px`)
+            graphRef.current.style.width=`${votePixels}px`
+        }
+        
+        if(lead){
+            graphRef.current.style.backgroundColor="#409d22"
         }
         convertVotes();
-    }, [votes])
+    }, [votes, lead])
 
     return (
         <div className={styles.graphContainer}>

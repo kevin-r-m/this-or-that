@@ -25,13 +25,15 @@ function CompetitionMetrics() {
                     <div className={styles.container}>
                                 <BarGraph 
                                 name={activeCompetition.name}
-                                image={activeCompetition.competitorOneImg}
-                                votes={activeCompetition.competitorOneVotes}
-                                /> 
+                                image={activeCompetition.competitorTwoImg}
+                                votes={activeCompetition.competitorTwoVotes}
+                                lead={true}/>
                                 <BarGraph 
                                 name={activeCompetition.name}
-                                image={activeCompetition.competitorTwoImg}
-                                votes={activeCompetition.competitorTwoVotes}/>
+                                image={activeCompetition.competitorOneImg}
+                                votes={activeCompetition.competitorOneVotes}
+                                lead={false}
+                                /> 
                     </div>
                     </>
 
