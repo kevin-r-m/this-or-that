@@ -10,6 +10,7 @@
     &:first-of-type {
         margin-bottom: 5px;
     }
+    
     img {
         width: 30px;
         height: 30px;
@@ -24,4 +25,46 @@
         transition: all 2s;
         width: 0px;
     }
+
+    .graphDataContainer {
+        position: relative;
+        max-width: 100%;
+
+        .dataToggle {
+            background-color: #bbb9b6;
+            padding: 5px;
+            position: absolute;
+            top: 0.5rem;
+            left: 50%;
+            transform: translatex(-50%);
+            border-radius: 5px;
+            top: -2.25rem;
+            min-width: 80px;
+            max-width: 100%;
+            text-align: center;
+            display: none;
+    
+            &::after {
+                content: '';
+                height: 0;
+                width: 0;
+                position: absolute;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 10px solid #bbb9b6;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+    
+            .dataText {
+                margin: 0;
+            }
+
+            &.active {
+                display: block;
+            }
+            
+        }
+    }
+
 }

@@ -4,7 +4,7 @@ import data from '../testData/competitorData.json'
 import '../styles/competiton.scss'
 import VoteConfirmationModal from './modals/VoteConfirmationModal';
 import apis from '../api'
-import CompetitionMetrics from './CompetitionMetrics';
+import Metrics from './Metrics';
 
 function Competition() {
     
@@ -76,7 +76,7 @@ function Competition() {
 
     return (
         <>
-        <CompetitionMetrics />
+        <Metrics />
         <div className={"competition-wrapper"}>
             <Competitor 
             setSelectedCompetitor={setSelectedCompetitor}

@@ -9,9 +9,9 @@ function CompetitionMetrics() {
     const [activeCompetition, setActiveCompetition] = useState();
     
     useEffect(()=> {
-        data.forEach(item => {
-            if(item.active){
-                setActiveCompetition(item);
+        data.forEach(record => {
+            if(record.active){
+                setActiveCompetition(record);
                 return
             }
         })
