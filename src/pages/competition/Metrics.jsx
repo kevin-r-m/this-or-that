@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import styles from '../styles/CompetitionMetrics.module.scss'
+import styles from '../../styles/CompetitionMetrics.module.scss'
 import BarGraph from './BarGraph';
-import data from '../testData/competitionData.json'
+import data from '../../testData/competitionData.json'
 import { useEffect } from 'react/cjs/react.development';
 
 function CompetitionMetrics() {

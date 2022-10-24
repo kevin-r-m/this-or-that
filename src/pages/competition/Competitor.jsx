@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import '../styles/competitor.scss';
-import batman from '../images/batman.jpeg';
+import '../../styles/competitor.scss';
+import batman from '../../images/batman.jpeg';
 
 function Competitor(props) {
 

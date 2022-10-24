@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Competitor from './Competitor';
-import data from '../testData/competitorData.json'
-import '../styles/competiton.scss'
-import VoteConfirmationModal from './modals/VoteConfirmationModal';
-import apis from '../api'
+import data from '../../testData/competitorData.json'
+import '../../styles/competiton.scss'
+import VoteConfirmationModal from '../../components/modals/VoteConfirmationModal';
+import apis from '../../api'
 import Metrics from './Metrics';
 
 function Competition() {
@@ -76,7 +76,6 @@ function Competition() {
 
     return (
         <>
-        <Metrics />
         <div className={"competition-wrapper"}>
             <Competitor 
             setSelectedCompetitor={setSelectedCompetitor}
