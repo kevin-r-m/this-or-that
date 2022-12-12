@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react/cjs/react.development';
-import '../../styles/modal.scss'
-import styles from '../../styles/VoteConfirmationModal.module.scss'
+import '../modal.scss'
+import styles from './VoteConfirmationModal.module.scss'
 
 function VoteConfirmationModal({handleModal, handleVote, selectedCompetitor, votedToday}) {
 

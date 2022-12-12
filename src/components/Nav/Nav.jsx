@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import '../styles/nav.scss'
-import logo from '../images/tot-logo.svg'
+import './nav.scss'
+import logo from '../../images/tot-logo.svg'
 
 function Nav(props) {
 

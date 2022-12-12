@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { useEffect } from 'react/cjs/react.development';
 import classNames from 'classnames/bind';
-import styles from '../../styles/BarGraph.module.scss'
+import styles from './BarGraph.module.scss'
 
 function BarGraph({name, image, votes, lead}) {
 

@@ -5,9 +5,9 @@ import Leaderboard from './pages/leaderboards/index';
 import data from './testData/competitorData.json'
 import { Route } from 'react-router-dom'
 import { Routes } from 'react-router';
-import Header from './components/Header';
-import './styles/base.scss'
-import './styles/main.scss'
+import Header from './components/Header/Header';
+import './styles/utilities/base.scss'
+import './styles/utilities/main.scss'
 import './styles/footer.scss'
 import Competitors from './pages/competitors/index';
 import apis from './api'
