@@ -1,0 +1,31 @@
+Component Flow & Structure Notes
+
+This will provide a rough overview on the current approach to this application architecture
+
+    1. Each page should have a context provider
+    2. Providers should contain all non-UI functionality & pass required state and functionality to consumers (children)
+    3. State updates should drive UI updates
+
+#######################################################
+Competition Page
+
+Main page of the application - it shows the current competition (2 competitors) along with competition metrics
+
+ #API Requirements:
+ Request current competiton object
+
+    Data Requirements:
+        competiton data
+        competitor data
+
+ #Functionality Requirements:
+  Show the current competiton
+  Check if someone is eligible to vote
+  Handle voting process
+
+ #Structure:
+  CompetitionContextProvider - state: [competition(object), votedToday(boolean), metrics(object)]
+    Competition.jsx
+        Competitor.jsx
+    Metrics.jsx
+        BarGraph.jsx
