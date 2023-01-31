@@ -1,0 +1,28 @@
+[
+    {
+        "id":"1",
+        "competitorOne":"6279c07ed0108a1adb483a06",
+        "competitorOneName":"Apple Pie",
+        "competitorOneImg":"https://cdn3.tmbi.com/toh/GoogleImagesPostCard/exps6086_HB133235C07_19_4b_WEB.jpg",
+        "competitorTwo":"6278702183235f29d8bfcd48",
+        "competitorTwoName":"Batman",
+        "competitorTwoImg":"https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/04/batman-barack-obama-5.jpg",
+        "competitorOneVotes":40,
+        "competitorTwoVotes":130,
+        "totalVotes":170,
+        "active": true
+    },
+    {
+        "id":"2",
+        "competitorOne":"6278702183235f29d8bfcd48",
+        "competitorOneName":"Batman",
+        "competitorOneImg":"https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/04/batman-barack-obama-5.jpg",
+        "competitorTwo":"6279c07ed0108a1adb483a06",
+        "competitorTwoName":"Apple Pie",
+        "competitorTwoImg":"https://cdn3.tmbi.com/toh/GoogleImagesPostCard/exps6086_HB133235C07_19_4b_WEB.jpg",
+        "competitorOneVotes":175,
+        "competitorTwoVotes":346,
+        "totalVotes":525,
+        "active": false
+    }
+]

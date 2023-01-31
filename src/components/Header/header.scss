@@ -1,0 +1,20 @@
+@use "../../styles/import.scss";
+
+.app-header {
+  width: 100%;
+  padding-top: 10px;
+  position: relative;
+  top: 0;
+}
+
+.page-title {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: bold;
+
+  @media (min-width: 767px) {
+    font-size: 4rem;
+  }
+}

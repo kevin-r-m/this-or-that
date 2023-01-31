@@ -1,0 +1,15 @@
+@use "../../../styles/import.scss";
+
+.wrapper {
+  margin: 20px 2.5rem;
+
+  h1 {
+    font-size: 0.8rem;
+  }
+
+  .container {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #a4a4a461;
+  }
+}
