@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className={"main-container App"}>
+      <div className={"container"}>
         <Routes>
           {/* Routing for leaderboard */}
           <Route
