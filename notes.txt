@@ -1,8 +1,8 @@
 Component Flow & Structure Notes
 
-This will provide a rough overview on the current approach to this application architecture
+This will provide an overview on the current architecture
 
-    1. Each page should have a context provider
+    1. Each page (an encapsulated webpage built of components & features) should have a context provider
     2. Providers should contain all non-UI functionality & pass required state and functionality to consumers (children)
     3. State updates should drive UI updates
 
