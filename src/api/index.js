@@ -6,7 +6,7 @@ const api = axios.create({
 
 export const getAllCompetitors = () => api.get(`/competitors`)
 export const getCompetitorById = id => api.get(`/competitor/${id}`)
-export const createCompetition = () => api.get(`/competition`).then(res => {return res.data})
+export const createCompetition = () => api.get(`/competition`)
 
 const apis = {
     getAllCompetitors,

@@ -1,0 +1,29 @@
+.app-header {
+    background-color: rgba(0, 128, 128, 0.487);
+    width: 100%;
+    padding-top: 10px;
+    position: relative;
+    transition: all .5s;
+    top: 0;
+    border-bottom: 7px inset #b49759;
+
+    @media(min-width: 767px){
+      border-bottom: 15px inset #b49759;
+    }
+  }
+  
+  .page-title {
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: bold;
+
+    @media(min-width:767px){
+      font-size: 4rem;
+    }
+  }
+
+  .hide {
+    top: -38px;
+  }
