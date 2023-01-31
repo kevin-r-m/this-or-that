@@ -28,6 +28,7 @@ export function CompetitionContextProvider({ children }) {
       const today = handleDateFormat(new Date());
       if (today === lastVoted) {
         setVotedToday(false);
+        return;
       }
     }
     setVotedToday(true);
@@ -66,7 +67,7 @@ export function CompetitionContextProvider({ children }) {
     window.localStorage.setItem("lastVotedFor", selectedCompetitor);
   }
 
-  const contextValues = {};
+  const contextValues = [];
 
   return (
     <CompetitionContext.Provider value={contextValues}>

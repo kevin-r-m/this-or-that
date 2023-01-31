@@ -1,25 +1,25 @@
 table {
-    width: 100%;
-    margin-bottom: 5vh;
-    margin-top: 2vh;
-    background-color: rgba(171, 233, 255, 0.371);
-    border-collapse: collapse;
-  
-    @media(min-width: 767px) {
-      font-size: 1.75rem;
-    }
+  width: 100%;
+  margin-bottom: 5vh;
+  margin-top: 2vh;
+  background-color: rgba(171, 233, 255, 0.371);
+  border-collapse: collapse;
+
+  @media (min-width: 767px) {
+    font-size: 1.75rem;
   }
-  
-  
-  th {
-    text-align: center;
-    background-color: teal;
-  }
-  
-  td {
-    background-color: rgba(221, 220, 220, 0.597);
-  }
-  
-  th, td {
-    padding-left: 5px;
-  }
+}
+
+th {
+  text-align: center;
+  background-color: teal;
+}
+
+td {
+  background-color: rgba(221, 220, 220, 0.597);
+}
+
+th,
+td {
+  padding-left: 5px;
+}
