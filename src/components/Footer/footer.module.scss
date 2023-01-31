@@ -21,7 +21,7 @@ footer {
     }
   }
 
-  @media (min-width: 767px) {
+  @include import.break-point(desktop) {
     position: fixed;
   }
 }

@@ -1,17 +1,19 @@
-.competitionWrapper {
-    margin: 0 2.5rem;
-    flex-wrap: wrap;
-    display: flex;
+@use "../../../styles/import.scss";
 
-    @media(min-width: 767px){
-      margin: 0 10rem;
-      margin-top: 5rem;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-around;
-    }
+.competitionWrapper {
+  margin: 0 2.5rem;
+  flex-wrap: wrap;
+  display: flex;
+
+  @media (min-width: 767px) {
+    margin: 0 10rem;
+    margin-top: 5rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
   }
-  
+}
+
 .competitionText {
   text-align: center;
 }

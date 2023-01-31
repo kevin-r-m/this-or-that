@@ -1,10 +1,12 @@
-.tot-logo{
+@use "../../styles/import.scss";
+
+.tot-logo {
   max-height: 30px;
   width: 30px;
   float: left;
   margin-left: 15px;
 
-  @media(min-width: 767px){
+  @media (min-width: 767px) {
     max-height: 80px;
     top: 8px;
     margin-left: 10rem;
@@ -17,58 +19,57 @@
 }
 
 .nav-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    
-    .nav-toggle {
-      height: fit-content;
-      text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 
-      img {
-        position: relative;
-        width: 25px;
-        height: auto;
-        left: 5px;
-        top: 4px;
-      }
-    }
-  
-    .nav-item {
+  .nav-toggle {
+    height: fit-content;
+    text-decoration: none;
+
+    img {
       position: relative;
-      padding: 10px;
-      padding-bottom: 2px;
-      margin: 0;
-      max-width: 25vw;
-      font-size: .75rem;
-      font-weight: bold;
-      text-decoration: none;
-      color: #393D38;
-      
-      @media(min-width: 776px){
-          margin: 0 5rem;
-          font-size: 2rem;
-          font-weight: bold;
-      }
-
-      &.active, &:hover {
-
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: -5px;
-          left: 9px;
-          background-color: rgb(180, 151, 89);
-          height: 4px;
-          width: 82%;
-        }
-      }
-    
-      &:hover {
-        cursor: pointer;
-      }
-    
+      width: 25px;
+      height: auto;
+      left: 5px;
+      top: 4px;
     }
   }
+
+  .nav-item {
+    position: relative;
+    padding: 10px;
+    padding-bottom: 2px;
+    margin: 0;
+    max-width: 25vw;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #393d38;
+
+    @media (min-width: 776px) {
+      margin: 0 5rem;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    &.active,
+    &:hover {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 9px;
+        background-color: rgb(180, 151, 89);
+        height: 4px;
+        width: 82%;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
