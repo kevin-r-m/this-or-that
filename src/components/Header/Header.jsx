@@ -1,10 +1,10 @@
 import React from "react";
 import Nav from "../Nav/Nav";
-import "./header.scss";
+import styles from "./header.module.scss";
 
 function Header() {
   return (
-    <header className="app-header">
+    <header className={styles.header}>
       <Nav />
     </header>
   );
