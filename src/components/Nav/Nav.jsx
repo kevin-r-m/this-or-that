@@ -1,23 +1,31 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./nav.scss";
+import classNames from "classnames/bind";
+import styles from "./nav.module.scss";
 import logo from "../../images/tot-logo.svg";
 
 function Nav(props) {
   const [active, setActive] = useState("");
 
+  const cx = classNames.bind(styles);
+
+  const navItemClass = cx({
+    navItem: true,
+    active: active,
+  });
+
   return (
     <div>
-      <img className="tot-logo" src={logo} alt="" />
-      <nav className="nav-bar">
-        <div className="nav-list">
-          <NavLink className={"nav-item" + active} to={"/"}>
+      <img className={styles.logo} src={logo} alt="" />
+      <nav className={styles.nav}>
+        <div className={styles.navList}>
+          <NavLink className={navItemClass} to={"/"}>
             Today
           </NavLink>
-          <NavLink className={"nav-item" + active} to={"/competitors"}>
+          <NavLink className={navItemClass} to={"/competitors"}>
             Competitors
           </NavLink>
-          <NavLink className={"nav-item" + active} to={"/leaderboards"}>
+          <NavLink className={navItemClass} to={"/leaderboards"}>
             Leaderboards
           </NavLink>
         </div>

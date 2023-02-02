@@ -1,25 +1,16 @@
-import React from 'react';
+import React from "react";
 
 function LeaderboardRow(competitorInfo) {
+  competitorInfo = competitorInfo.competitorInfo;
 
-    competitorInfo = competitorInfo.competitorInfo
-    
-    return (
-        <tr>
-            <td className="border">
-                {competitorInfo.name}
-            </td>
-            <td className="border">
-                {competitorInfo.wins}
-            </td>
-            <td className="border">
-                {competitorInfo.losses}
-            </td>
-            <td className="border">
-                {competitorInfo.totalVotes}
-            </td>
-        </tr>
-    );
+  return (
+    <tr>
+      <td>{competitorInfo.name}</td>
+      <td>{competitorInfo.wins}</td>
+      <td>{competitorInfo.losses}</td>
+      <td>{competitorInfo.totalVotes}</td>
+    </tr>
+  );
 }
 
 export default LeaderboardRow;
