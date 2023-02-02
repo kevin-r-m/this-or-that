@@ -1,17 +1,18 @@
 import React from "react";
+import data from "../../testData/competitorData.json";
 import LeaderboardRow from "./LeaderboardRow";
-import "./leaderboard.scss";
+import styles from "./leaderboard.module.scss";
 
-function Leaderboard({ data }) {
+function Leaderboard() {
   return (
     <div>
-      <table>
+      <table className={styles.table}>
         <tbody>
           <tr>
-            <th className="border border-right-0 pl-2">Competitor Name</th>
-            <th className="border pl-2">Wins</th>
-            <th className="border pl-2">Loss</th>
-            <th className="border pl-2">Votes</th>
+            <th>Competitor Name</th>
+            <th>Wins</th>
+            <th>Loss</th>
+            <th>Votes</th>
           </tr>
           {data.map((item) => {
             return <LeaderboardRow competitorInfo={item} key={item.id} />;
