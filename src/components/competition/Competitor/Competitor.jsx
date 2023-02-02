@@ -1,19 +1,27 @@
 import React, { useState, useRef } from "react";
-import "./competitor.scss";
+import styles from "./competitor.module.scss";
+import classNames from "classnames/bind";
 import batman from "../../../images/batman.jpeg";
 
 function Competitor(props) {
   const [showInfo, setShowInfo] = useState("");
   const elementRef = useRef();
 
+  const cx = classNames.bind(styles);
+
+  const moreInfoClass = cx({
+    moreInfoContainer: true,
+    show: showInfo,
+  });
+
   function handleClick(e) {
     e.preventDefault();
-    if (showInfo === " show") {
-      setShowInfo("");
+    if (showInfo) {
+      setShowInfo(false);
       elementRef.current.innerHTML = "See info +";
       return;
     }
-    setShowInfo(" show");
+    setShowInfo(true);
     elementRef.current.innerHTML = "Hide info -";
   }
 
@@ -25,37 +33,33 @@ function Competitor(props) {
 
   return (
     <>
-      <div className="competitor-container">
-        <div className="competitor-title">
+      <div className={styles.competitorContainer}>
+        <div className={styles.title}>
           <h3>{props.competitorInfo.name}</h3>
           <p
-            className="more-info-toggle"
+            className={styles.moreInfoToggle}
             onClick={handleClick}
             ref={elementRef}
           >
             See info +
           </p>
         </div>
-        <div className={"more-info-container" + showInfo}>
-          <div className="more-info-body">
+        <div className={moreInfoClass}>
+          <div className={styles.moreInfoBody}>
             <p>{props.competitorInfo.description}</p>
-            <a href="#" className="competitor-link">
-              Go to competitor profile
-            </a>
+            <a href="#">Go to competitor profile</a>
           </div>
         </div>
-        <div className="competitor-image-wrapper">
+        <div className={styles.imageWrapper}>
           <img src={batman} alt="batman" />
-          <div className="voting-container">
-            <button
-              className="vote-button"
-              onClick={openModal}
-              data-competitor={props.competitorInfo.name}
-            >
-              Cast vote for {props.competitorInfo.name}
-            </button>
-          </div>
         </div>
+        <button
+          className={styles.voteButton}
+          onClick={openModal}
+          data-competitor={props.competitorInfo.name}
+        >
+          Cast vote for {props.competitorInfo.name}
+        </button>
       </div>
     </>
   );

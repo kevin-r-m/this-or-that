@@ -1,39 +1,28 @@
 @use "../../../styles/import.scss";
 
-.competitor-container {
+.competitorContainer {
   margin: 0;
   width: 100%;
   text-align: center;
-  padding: 5px;
+  padding: import.em(5);
   border-radius: 10px;
   position: relative;
   background-color: #a4a4a461;
 
-  .more-info-toggle {
+  .moreInfoToggle {
     margin: 0;
-    margin-right: 5px;
+    margin-right: import.em(5);
     font-weight: 700;
     cursor: pointer;
     line-height: 1.7;
     font-size: 0.9rem;
   }
 
-  .competitor-image-wrapper {
+  .imageWrapper {
     text-align: center;
-    padding: 8px 0;
-
-    img {
-      width: 75%;
-
-      @media (min-width: 767px) {
-        width: 94%;
-        padding: 5px;
-        margin: 0 7px;
-        height: 380px;
-      }
-    }
+    padding: import.em(10);
   }
-  .more-info-container {
+  .moreInfoContainer {
     background-color: #afccd6;
     box-shadow: 0 8px 5px #00000030;
     display: flex;
@@ -50,9 +39,9 @@
       border-top: 2px solid #393d38;
     }
 
-    .more-info-body {
+    .moreInfoBody {
       background-color: #d5dcdf;
-      padding: 12px;
+      padding: import.em(12);
       border-radius: 5px;
       align-self: center;
 
@@ -67,25 +56,25 @@
         }
       }
 
-      @media (min-width: 767px) {
-        padding: 10px;
+      @include import.break-point(desktop) {
+        padding: import.em(10);
       }
     }
   }
 
-  @media (min-width: 767px) {
+  @include import.break-point(desktop) {
     width: 42%;
   }
 }
 
-.vote-button {
-  margin-top: 2px;
+.voteButton {
+  margin-top: import.em(2);
   margin-bottom: 0;
   font-weight: 600;
   background-color: #00000066;
   border: none;
   border-radius: 5px;
-  padding: 5px 11px;
+  padding: import.em(5) import.em(11);
   color: #8bf4f6;
   cursor: pointer;
 
@@ -93,20 +82,20 @@
     background-color: #00000091;
   }
 
-  @media (min-width: 767px) {
+  @include import.break-point(desktop) {
     font-size: 1.2rem;
   }
 }
 
-.competitor-title {
-  padding: 4px 4px;
+.title {
+  padding: import.em(4);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 0;
   font-size: 1.2rem;
   text-align: left;
-  margin-left: 5px;
+  margin-left: import.em(5);
 
   h3 {
     margin-top: 0;
@@ -123,9 +112,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  // padding: 10px;
-  // max-width: 225px;
   height: 196px;
-  // overflow-wrap: normal;
   overflow: auto;
 }
