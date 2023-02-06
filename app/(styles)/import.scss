@@ -1,0 +1,5 @@
+// Aggregates scss files from ./tools/ that are passed to component stylesheets (colors, mixins, etc.)
+// To use in other files => @use ../../styles/import.scss
+
+@forward "./tools/mediaQueries";
+@forward "./tools/functions";
