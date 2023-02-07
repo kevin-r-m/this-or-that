@@ -1,5 +1,11 @@
+import Metrics from "../(components)/Metrics";
+
 function page() {
-  return <div></div>;
+  return (
+    <div>
+      <Metrics />
+    </div>
+  );
 }
 
 export default page;

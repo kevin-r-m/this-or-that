@@ -1,0 +1,8 @@
+@use "../../\(styles\)/import.scss";
+
+.wrapper {
+  background-color: import.$placeholder-grey;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
