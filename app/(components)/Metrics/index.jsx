@@ -1,12 +1,14 @@
-import Date from "./Date";
+import { MetricsContextProvider } from "./MetricsContextProvider";
+import Headline from "./Headline";
 import styles from "./Metrics.module.scss";
 
 function Metrics() {
   return (
-    <div className={styles.wrapper}>
-      <Date />
-      <h1>Batman vs Apple Pie</h1>
-    </div>
+    <section className={styles.wrapper}>
+      <MetricsContextProvider>
+        <Headline />
+      </MetricsContextProvider>
+    </section>
   );
 }
 
