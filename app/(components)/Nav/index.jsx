@@ -1,13 +1,33 @@
-import Link from "next/link";
+"use client";
 
-function index() {
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+function Nav() {
+  const pathname = usePathname();
+
   return (
     <nav>
-      <Link href="/compeition">Today</Link>
-      <Link href="/competitors">Competitors</Link>
-      <Link href="/leaderboards">Leaderboards</Link>
+      <Link
+        href="/competition"
+        className={pathname === "/competition" ? "active" : ""}
+      >
+        Today
+      </Link>
+      <Link
+        href="/competitors"
+        className={pathname === "/competitors" ? "active" : ""}
+      >
+        Competitors
+      </Link>
+      <Link
+        href="/leaderboards"
+        className={pathname === "/leaderboards" ? "active" : ""}
+      >
+        Leaderboards
+      </Link>
     </nav>
   );
 }
 
-export default index;
+export default Nav;
