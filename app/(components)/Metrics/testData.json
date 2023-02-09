@@ -1,0 +1,14 @@
+{
+    "competitorOne": {
+        "name": "Batman",
+        "votes": 413,
+        "winner": false
+    },
+    "competitorTwo": {
+        "name": "Apple Pie",
+        "votes": 323,
+        "winner": false
+    },
+    "totalVotes": 736,
+    "leader": "Batman"
+}
