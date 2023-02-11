@@ -1,0 +1,13 @@
+@use "../../\(styles\)/import.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 65px;
+  position: relative;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  background-color: #2affea7d;
+  backdrop-filter: blur(15px);
+}
