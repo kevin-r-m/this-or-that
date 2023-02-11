@@ -1,8 +1,9 @@
-import Nav from "../Nav";
+import Nav from "./Nav";
+import styles from "./Header.module.scss";
 
 function Header() {
   return (
-    <header>
+    <header className={styles.header}>
       <Nav />
     </header>
   );
