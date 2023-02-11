@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 28px;
+  z-index: 1;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &.active {
+      border-bottom: 2px solid black;
+    }
+  }
+}
