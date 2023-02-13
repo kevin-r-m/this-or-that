@@ -4,7 +4,7 @@ import Header from "./(components)/Header";
 import Footer from "./(components)/Footer";
 
 const inter = Inter({
-  weight: "600",
+  weight: ["500", "700"],
   subsets: ["latin"],
 });
 
