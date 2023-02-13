@@ -1,3 +1,7 @@
-.headline {
-  padding: 8px;
+@use "../../../\(styles\)/import.scss";
+
+.headlineContainer {
+  h3 {
+    margin: import.em(6) 0;
+  }
 }

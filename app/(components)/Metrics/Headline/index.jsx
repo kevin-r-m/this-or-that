@@ -9,7 +9,7 @@ function Headline() {
   const { competitionState } = useMetricsContext();
 
   return (
-    <div className={styles.headline}>
+    <div className={styles.headlineContainer}>
       <Today />
       <Text
         tag="h3"
