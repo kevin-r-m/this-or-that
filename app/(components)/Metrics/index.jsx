@@ -4,6 +4,7 @@ import styles from "./Metrics.module.scss";
 import Leader from "./Leader";
 import TotalVotes from "./TotalVotes";
 import VoteTime from "./VoteTime";
+import Graph from "./Graph";
 
 function Metrics() {
   return (
@@ -14,6 +15,9 @@ function Metrics() {
           <Leader />
           <TotalVotes />
           <VoteTime />
+        </div>
+        <div>
+          <Graph />
         </div>
       </MetricsContextProvider>
     </section>
