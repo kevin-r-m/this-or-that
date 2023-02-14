@@ -4,11 +4,7 @@ import { useMetricsContext } from "../MetricsContextProvider";
 import styles from "./leader.module.scss";
 
 function Leader() {
-  const { competitionState } = useMetricsContext();
-
-  function calculateVoteDifference() {
-    return competitionState.totalVotes - competitionState.competitorTwo.votes;
-  }
+  const { competitionState, calculateVoteDifference } = useMetricsContext();
 
   return (
     <div className={styles.leaderContainer}>
