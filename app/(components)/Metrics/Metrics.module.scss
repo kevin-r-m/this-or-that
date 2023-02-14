@@ -6,6 +6,7 @@
   flex-direction: column;
   border-radius: 5px;
   padding: import.em(8);
+  row-gap: import.em(10);
 
   .metricRow {
     display: flex;
