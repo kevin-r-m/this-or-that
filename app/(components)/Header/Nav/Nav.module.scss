@@ -17,17 +17,32 @@
     width: 0vw;
     left: 0;
     top: 65px;
-    transition: height 1s, width 0.5s, padding 0.5s, opacity 0.25s;
+    transition: height 1s, width 0.5s, opacity 0.25s;
     background-color: import.$placeholder-grey;
-    padding: 0;
+    padding: import.em(25) import.em(15);
     opacity: 0;
     row-gap: import.em(16);
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      width: 0%;
+      left: -2px;
+      top: 0;
+      transition: width 1s;
+      background-color: import.$placeholder-dark-grey;
+      border-radius: import.$global-border-radius;
+    }
 
     &.expanded {
       height: 100vh;
       width: 100vw;
-      padding: import.em(25) import.em(15);
       opacity: 1;
+
+      &::after {
+        width: 105%;
+      }
     }
   }
 
