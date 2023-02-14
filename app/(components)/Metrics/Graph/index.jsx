@@ -25,6 +25,19 @@ function Graph() {
     responsive: true,
     barPercentage: 0.4,
     indexAxis: "y",
+    // scales: {
+    //   x: {
+    //     beforeUpdate(axis) {
+    //       const labels = axis.chart.data.labels;
+    //       for (let i = 0; i < labels.length; i++) {
+    //         const lbl = labels[i];
+    //         if (typeof lbl === "string" && lbl.length > 7) {
+    //           labels[i] = lbl.substring(0, 7) + "..."; // cutting
+    //         }
+    //       }
+    //     },
+    //   },
+    // },
     elements: {
       bar: {
         borderWidth: 1,
