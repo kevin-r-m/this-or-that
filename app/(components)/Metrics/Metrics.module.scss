@@ -7,6 +7,7 @@
   border-radius: 5px;
   padding: import.em(8);
   row-gap: import.em(10);
+  filter: drop-shadow(0 5px 5px import.$place-holder-drop-shadow);
 
   .metricRow {
     display: flex;
