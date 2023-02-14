@@ -1,21 +1,23 @@
 "use client";
 
-import styles from "./voteTime.module.scss";
-import Countdown from "react-countdown";
-import { useRef } from "react";
+import { useEffect, useState } from "react";
 import { useMetricsContext } from "../MetricsContextProvider";
+import Countdown from "react-countdown";
+import styles from "./voteTime.module.scss";
 
 function VoteTime() {
+  const [timeLeft, setTimeLeft] = useState();
   const { millisecondsUntilMidnight } = useMetricsContext();
-  const timeRef = useRef(millisecondsUntilMidnight());
+
+  useEffect(() => {
+    setTimeLeft(Date.now() + millisecondsUntilMidnight());
+  }, [millisecondsUntilMidnight]);
 
   return (
     <div className={styles.timeContainer}>
       <p>Time left for voting:</p>
       <p>
-        <b>
-          <Countdown date={Date.now() + timeRef.current} />
-        </b>
+        <b>{timeLeft ? <Countdown date={timeLeft} /> : "00:00:00:00"}</b>
       </p>
     </div>
   );
