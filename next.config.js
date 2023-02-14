@@ -4,11 +4,6 @@ const nextConfig = {
     appDir: true,
   },
   reactStrictMode: true,
-  modularizeImports: {
-    "chart.js": {
-      transform: "chart.js/{{member}}",
-    },
-  },
   async redirects() {
     return [
       {
