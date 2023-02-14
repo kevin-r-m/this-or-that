@@ -18,7 +18,10 @@ export function MetricsContextProvider({ children }) {
   };
 
   function calculateVoteDifference() {
-    return competitionState.totalVotes - competitionState.competitorTwo.votes;
+    return Math.abs(
+      competitionState.competitorTwo.votes -
+        competitionState.competitorOne.votes
+    );
   }
 
   function millisecondsUntilMidnight() {
