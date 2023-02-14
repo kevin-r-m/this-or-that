@@ -3,20 +3,11 @@
 import styles from "./voteTime.module.scss";
 import Countdown from "react-countdown";
 import { useRef } from "react";
+import { useMetricsContext } from "../MetricsContextProvider";
 
 function VoteTime() {
+  const { millisecondsUntilMidnight } = useMetricsContext();
   const timeRef = useRef(millisecondsUntilMidnight());
-
-  function millisecondsUntilMidnight() {
-    const now = new Date();
-    const tomorrow = new Date(
-      now.getFullYear(),
-      now.getMonth(),
-      now.getDate() + 1
-    );
-    const millisecondsUntilMidnight = tomorrow - now;
-    return millisecondsUntilMidnight;
-  }
 
   return (
     <div className={styles.timeContainer}>

@@ -11,10 +11,25 @@ export function useMetricsContext() {
 
 export function MetricsContextProvider({ children }) {
   const [competitionState] = useState(data);
-  const contextValues = { competitionState, calculateVoteDifference };
+  const contextValues = {
+    competitionState,
+    calculateVoteDifference,
+    millisecondsUntilMidnight,
+  };
 
   function calculateVoteDifference() {
     return competitionState.totalVotes - competitionState.competitorTwo.votes;
+  }
+
+  function millisecondsUntilMidnight() {
+    const now = new Date();
+    const tomorrow = new Date(
+      now.getFullYear(),
+      now.getMonth(),
+      now.getDate() + 1
+    );
+    const millisecondsUntilMidnight = tomorrow - now;
+    return millisecondsUntilMidnight;
   }
 
   return (
