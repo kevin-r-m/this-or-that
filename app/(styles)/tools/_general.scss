@@ -1,3 +1,8 @@
+@use "./functions";
 section {
-  margin: 24px 0;
+  margin: functions.em(24) 0;
+
+  &:first-of-type {
+    margin-top: functions.em(12);
+  }
 }
