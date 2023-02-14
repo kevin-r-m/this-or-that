@@ -16,9 +16,7 @@ function Metrics() {
           <TotalVotes />
           <VoteTime />
         </div>
-        <div>
-          <Graph />
-        </div>
+        <Graph />
       </MetricsContextProvider>
     </section>
   );
