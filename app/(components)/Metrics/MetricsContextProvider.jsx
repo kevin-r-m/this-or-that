@@ -11,7 +11,11 @@ export function useMetricsContext() {
 
 export function MetricsContextProvider({ children }) {
   const [competitionState] = useState(data);
-  const contextValues = { competitionState };
+  const contextValues = { competitionState, calculateVoteDifference };
+
+  function calculateVoteDifference() {
+    return competitionState.totalVotes - competitionState.competitorTwo.votes;
+  }
 
   return (
     <MetricsContext.Provider value={contextValues}>
