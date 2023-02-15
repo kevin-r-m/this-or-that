@@ -19,7 +19,7 @@ function Graph() {
   ChartJS.defaults.color = "#000";
   ChartJS.defaults.font.size = 16;
 
-  const { competitionState } = useMetricsContext();
+  const { competitionState, graphRef } = useMetricsContext();
 
   const options = {
     responsive: true,
@@ -70,7 +70,7 @@ function Graph() {
     ],
   };
   return (
-    <div className={styles.graphContainer}>
+    <div className={styles.graphContainer} ref={graphRef}>
       <Bar options={options} data={data} />
     </div>
   );
