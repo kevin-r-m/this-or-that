@@ -19,7 +19,7 @@ function AnimatedButton({ callback }) {
     <button
       className={styles.menu}
       onClick={handleClick}
-      aria-label="Main Menu"
+      aria-label="Navigation Menu"
     >
       <svg ref={elementRef} width="50" height="50" viewBox="0 0 100 100">
         <path
