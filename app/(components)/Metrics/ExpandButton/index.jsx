@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./expandButton.module.scss";
 
-function index({ callback }) {
+function ExpandButton({ callback }) {
   return (
     <button className={styles.expandButton} onClick={callback}>
       <Image src="/images/cross.svg" alt="Toggle" width={"20"} height={"20"} />
@@ -9,4 +9,4 @@ function index({ callback }) {
   );
 }
 
-export default index;
+export default ExpandButton;
