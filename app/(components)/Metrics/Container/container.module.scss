@@ -1,4 +1,4 @@
-@use "../../\(styles\)/import.scss";
+@use "../../../\(styles\)/import.scss";
 
 .wrapper {
   background-color: import.$placeholder-grey;
@@ -6,11 +6,13 @@
   flex-direction: column;
   border-radius: 5px;
   padding: import.em(8);
-  row-gap: import.em(10);
   filter: drop-shadow(0 5px 5px import.$place-holder-drop-shadow);
+  overflow: hidden;
+  height: 159px;
 
   .metricRow {
     display: flex;
     column-gap: import.em(10);
+    margin-bottom: import.em(10);
   }
 }
