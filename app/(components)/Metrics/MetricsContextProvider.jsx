@@ -42,7 +42,8 @@ export function MetricsContextProvider({ children }) {
     return millisecondsUntilMidnight;
   }
 
-  function handleMetricToggle() {
+  function handleMetricToggle(e) {
+    const { target } = e;
     const graphHeight = graphRef.current.offsetHeight;
     const metricsHeight = metricsRef.current.offsetHeight;
     const metricStaticHeight = 159;
@@ -53,7 +54,7 @@ export function MetricsContextProvider({ children }) {
       fill: "forwards",
     };
     let animationSettings;
-
+    target.classList.toggle("rotate");
     if (!expandedRef.current) {
       animationSettings = {
         height: `${metricsHeight + (graphHeight + paddingBuffer)}px`,
