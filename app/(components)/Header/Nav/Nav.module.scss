@@ -17,7 +17,7 @@
     width: 0vw;
     left: 0;
     top: 65px;
-    transition: height 1s, width 0.5s, opacity 0.25s;
+    transition: height 0.75s, width 0.75s, opacity 0.25s;
     background-color: import.$placeholder-grey;
     padding: import.em(25) import.em(15);
     opacity: 0;
@@ -30,7 +30,7 @@
       width: 0%;
       left: -2px;
       top: 0;
-      transition: width 1s;
+      transition: width 1.25s;
       background-color: import.$placeholder-dark-grey;
       border-radius: import.$global-border-radius;
     }
