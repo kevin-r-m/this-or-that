@@ -11,7 +11,7 @@ function Body() {
       </div>
       <div className={styles.buttonsContainer}>
         <Button value="Go to profile" />
-        <Button value="Vote" />
+        <Button value="Vote" vote />
       </div>
     </div>
   );
