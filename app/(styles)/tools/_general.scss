@@ -1,4 +1,9 @@
 @use "./functions";
+
+body {
+  padding-bottom: functions.em(30);
+}
+
 section {
   margin: functions.em(24) 0;
 
