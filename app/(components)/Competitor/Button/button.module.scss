@@ -1,0 +1,10 @@
+@use "../../../\(styles\)/import.scss";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: import.$placeholder-light-grey;
+  border-radius: import.$global-border-radius;
+  border: none;
+}

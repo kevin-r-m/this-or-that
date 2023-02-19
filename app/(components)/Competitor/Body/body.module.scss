@@ -1,0 +1,19 @@
+@use "../../../\(styles\)/import.scss";
+
+.body {
+  display: flex;
+  flex-direction: row;
+
+  .imageContainer {
+    max-width: 100%;
+    flex: 1;
+  }
+
+  .buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: import.em(10);
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
