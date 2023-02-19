@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState, useRef } from "react";
-import data from "./testData.json";
+import data from "../../(data)/competition.json";
 
 const MetricsContext = createContext();
 
