@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./headline.module.scss";
 
-function index() {
+function index({ competitorName }) {
   return (
     <div>
-      <h3>Batman</h3>
+      <h3>{competitorName}</h3>
     </div>
   );
 }
