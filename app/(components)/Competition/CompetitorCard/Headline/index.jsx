@@ -3,7 +3,7 @@ import styles from "./headline.module.scss";
 
 function CompetitorCard({ competitorName }) {
   return (
-    <div>
+    <div className={styles.headline}>
       <h3>{competitorName}</h3>
     </div>
   );
