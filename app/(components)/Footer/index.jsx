@@ -1,5 +1,15 @@
+import styles from "./footer.module.scss";
+
 function Footer() {
-  return <footer>&copy; 2023</footer>;
+  return (
+    <footer className={styles.footer}>
+      <div>
+        <p>
+          This or That <br /> 2023
+        </p>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;
