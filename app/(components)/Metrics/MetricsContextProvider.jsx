@@ -46,7 +46,7 @@ export function MetricsContextProvider({ children }) {
     const { target } = e;
     const graphHeight = graphRef.current.offsetHeight;
     const metricsHeight = metricsRef.current.offsetHeight;
-    const metricStaticHeight = 159;
+    const metricStaticHeight = 164;
     const paddingBuffer = 10;
     const animation = {
       duration: 250,
