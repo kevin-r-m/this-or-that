@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./headline.module.scss";
 
-function index({ competitorName }) {
+function CompetitorCard({ competitorName }) {
   return (
     <div>
       <h3>{competitorName}</h3>
@@ -9,4 +9,4 @@ function index({ competitorName }) {
   );
 }
 
-export default index;
+export default CompetitorCard;

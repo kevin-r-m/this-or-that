@@ -1,11 +1,11 @@
 import Metrics from "../(components)/Metrics";
-import Competitor from "../(components)/Competitor";
+import CompetitorCard from "../(components)/CompetitorCard";
 
 function page() {
   return (
     <>
       <Metrics />
-      <Competitor />
+      <CompetitorCard />
     </>
   );
 }
