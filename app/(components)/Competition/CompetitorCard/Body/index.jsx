@@ -1,4 +1,4 @@
-import Image from "../../Global/Image";
+import Image from "../../../Global/Image";
 import Button from "../Button";
 import styles from "./body.module.scss";
 import placeholderImage from "/public/images/placeholder-image.webp";

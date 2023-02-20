@@ -5,7 +5,7 @@ import data from "../../(data)/competition.json";
 
 const CompetitionContext = createContext();
 
-export function useCompetitorContext() {
+export function useCompetitionContext() {
   return useContext(CompetitionContext);
 }
 
