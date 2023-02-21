@@ -1,0 +1,35 @@
+.competitorTransition {
+  bottom: 0;
+  position: relative;
+
+  &.voting-body-enter {
+    opacity: 0;
+  }
+  &.voting-body-enter-active {
+    opacity: 1;
+    transition: all 400ms;
+  }
+  &.voting-body-exit {
+    opacity: 1;
+  }
+  &.voting-body-exit-active {
+    opacity: 0;
+    transition: all 400ms;
+    position: absolute;
+  }
+  &.body-enter {
+    opacity: 0;
+  }
+  &.body-enter-active {
+    opacity: 1;
+    transition: all 400ms;
+  }
+  &.body-exit {
+    opacity: 1;
+  }
+  &.body-exit-active {
+    opacity: 0;
+    transition: all 400ms;
+    position: absolute;
+  }
+}
