@@ -1,0 +1,14 @@
+@use "../../../../\(styles\)/import.scss";
+
+.votingBody {
+  margin-bottom: import.em(8);
+  background-color: import.$placeholder-light-grey;
+  padding: import.em(8);
+  border-radius: import.$global-border-radius;
+
+  .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
