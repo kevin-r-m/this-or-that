@@ -1,6 +1,8 @@
 .competitorTransition {
   bottom: 0;
   position: relative;
+  left: 50%;
+  transform: translate(-50%);
 
   &.voting-body-enter {
     opacity: 0;
@@ -15,7 +17,8 @@
   &.voting-body-exit-active {
     opacity: 0;
     transition: all 400ms;
-    position: absolute;
+    position: fixed;
+    max-width: 95%;
   }
   &.body-enter {
     opacity: 0;
@@ -30,6 +33,8 @@
   &.body-exit-active {
     opacity: 0;
     transition: all 400ms;
-    position: absolute;
+    position: fixed;
+    max-width: 95%;
+    z-index: 0;
   }
 }

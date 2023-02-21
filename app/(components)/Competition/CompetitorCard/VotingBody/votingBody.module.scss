@@ -5,6 +5,12 @@
   background-color: import.$placeholder-light-grey;
   padding: import.em(8);
   border-radius: import.$global-border-radius;
+  min-height: 150px;
+  max-width: 100%;
+
+  p {
+    margin-bottom: import.em(30);
+  }
 
   .buttonsContainer {
     display: flex;
