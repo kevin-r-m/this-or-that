@@ -19,6 +19,7 @@
     "react-chartjs-2": "^5.2.0",
     "react-countdown": "^2.3.5",
     "react-dom": "18.2.0",
+    "react-transition-group": "^4.4.5",
     "sass": "^1.58.0"
   }
 }

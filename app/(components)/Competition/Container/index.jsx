@@ -9,7 +9,6 @@ function Container() {
   return (
     <section>
       <CompetitorCard competitorName={competitionState.competitorOne.name} />
-      <CompetitorCard competitorName={competitionState.competitorTwo.name} />
     </section>
   );
 }
