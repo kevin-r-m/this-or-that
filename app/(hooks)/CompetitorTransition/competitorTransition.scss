@@ -1,40 +1,31 @@
 .competitorTransition {
   bottom: 0;
   position: relative;
-  left: 50%;
-  transform: translate(-50%);
+  left: 0;
 
   &.voting-body-enter {
-    opacity: 0;
   }
   &.voting-body-enter-active {
-    opacity: 1;
     transition: all 400ms;
+    left: 0;
   }
   &.voting-body-exit {
-    opacity: 1;
   }
   &.voting-body-exit-active {
-    opacity: 0;
+    left: -110%;
     transition: all 400ms;
-    position: absolute;
     max-width: 95%;
   }
   &.body-enter {
-    opacity: 0;
   }
   &.body-enter-active {
-    opacity: 1;
     transition: all 400ms;
   }
   &.body-exit {
-    opacity: 1;
   }
   &.body-exit-active {
-    opacity: 0;
     transition: all 400ms;
-    position: absolute;
     max-width: 95%;
-    z-index: 0;
+    left: -110%;
   }
 }
