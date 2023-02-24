@@ -16,7 +16,7 @@ function CompetitorCard({ competitorName }) {
         <Headline competitorName={competitorName} />
 
         <CompetitorTransition
-          duration={1000}
+          duration={500}
           state={isVoting}
           className={"body"}
         >
@@ -24,7 +24,7 @@ function CompetitorCard({ competitorName }) {
         </CompetitorTransition>
 
         <CompetitorTransition
-          duration={1000}
+          duration={500}
           state={!isVoting}
           className={"voting-body"}
         >
