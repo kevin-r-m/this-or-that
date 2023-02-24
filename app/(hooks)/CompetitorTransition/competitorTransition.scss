@@ -17,18 +17,21 @@
   }
   &.voting-body-enter-active {
     transition: all 0.75s;
+    -webkit-transition: all 0.75s;
     opacity: 1;
     filter: drop-shadow(0px 2px 7px import.$placeholder-drop-shadow);
   }
   &.voting-body-enter-done {
     transition: all 0.75s;
+    -webkit-transition: all 0.75s;
   }
   &.voting-body-exit {
     opacity: 1;
   }
   &.voting-body-exit-active {
     left: -110%;
-    transition: all 0.5s;
+    transition: all 0.75s;
+    -webkit-transition: all 0.75s;
     opacity: 0;
     filter: drop-shadow(0px 2px 7px import.$placeholder-drop-shadow);
   }
@@ -38,11 +41,13 @@
   }
   &.body-enter-active {
     transition: all 0.75s;
+    -webkit-transition: all 0.75s;
     opacity: 1;
     filter: drop-shadow(0px 2px 7px import.$placeholder-drop-shadow);
   }
   &.body-enter-done {
     transition: all 0.75s;
+    -webkit-transition: all 0.75s;
     filter: drop-shadow(0px 0px 0px import.$placeholder-drop-shadow);
   }
   &.body-exit {
@@ -50,6 +55,7 @@
   }
   &.body-exit-active {
     transition: all 0.75s;
+    -webkit-transition: all 0.75s;
     opacity: 0;
     max-width: 95%;
     left: -110%;
