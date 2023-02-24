@@ -1,30 +1,50 @@
+@use "../../\(styles\)/import.scss";
+
 .competitorTransition {
-  bottom: 0;
-  position: relative;
-  left: 0;
+  position: absolute;
+  left: 50%;
+  top: 57%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  background-color: import.$placeholder-grey;
+  border-radius: import.$global-border-radius;
 
   &.voting-body-enter {
+    opacity: 0;
   }
   &.voting-body-enter-active {
-    transition: all 400ms;
-    left: 0;
+    transition: all 0.75s, top 0s;
+    opacity: 1;
+    top: 59%;
+  }
+  &.voting-body-enter-done {
+    transition: all 0.75s, top 0s;
+    top: 59%;
   }
   &.voting-body-exit {
+    opacity: 1;
   }
   &.voting-body-exit-active {
     left: -110%;
-    transition: all 400ms;
-    max-width: 95%;
+    transition: all 0.5s, top 0s;
+    top: 59%;
+    opacity: 0;
   }
   &.body-enter {
+    opacity: 0;
   }
   &.body-enter-active {
-    transition: all 400ms;
+    transition: all 0.75s;
+    opacity: 1;
   }
   &.body-exit {
+    opacity: 1;
   }
   &.body-exit-active {
-    transition: all 400ms;
+    transition: all 0.75s;
+    opacity: 0;
     max-width: 95%;
     left: -110%;
   }
