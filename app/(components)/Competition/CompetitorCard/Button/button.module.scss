@@ -8,7 +8,7 @@
   border-radius: import.$global-border-radius;
   border: none;
   color: import.$black;
-  padding: 0 import.em(8);
+  padding: import.em(8);
   position: relative;
   overflow: hidden;
 
@@ -19,11 +19,11 @@
   &.vote {
     width: 100%;
     height: 70px;
-    background-color: #0f968b;
+    background-color: #2bba87;
   }
 
   &.confirm {
-    background-color: #0f968b;
+    background-color: #2bba87;
   }
 
   &.decline {

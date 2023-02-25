@@ -10,10 +10,10 @@ function VotingBody({ competitorName }) {
 
   return (
     <div className={styles.votingBody}>
-      <p>Are you sure you want to cast your vote for {competitorName}?</p>
+      <p>Alright, confirm you vote for {competitorName}?</p>
       <div className={styles.buttonsContainer}>
-        <Button callback={handleVoting} value="Yes" confirm />
-        <Button callback={handleVoting} value="No" decline />
+        <Button callback={handleVoting} value="Confirm" confirm />
+        <Button callback={handleVoting} value="Take me back" decline />
       </div>
     </div>
   );

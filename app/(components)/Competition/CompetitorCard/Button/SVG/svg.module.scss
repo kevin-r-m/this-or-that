@@ -18,6 +18,7 @@ $stroke-dashoffset: 0;
   stroke-dashoffset: 471;
   transform: rotate(-90deg);
   transform-origin: center;
+  outline: 1px solid transparent;
 }
 @mixin animation-mixin($name, $from, $to) {
   @keyframes #{$name} {
