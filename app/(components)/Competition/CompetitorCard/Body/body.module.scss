@@ -3,6 +3,7 @@
 .body {
   display: flex;
   flex-direction: row;
+  padding: import.em(5);
 
   .imageContainer {
     max-width: 100%;

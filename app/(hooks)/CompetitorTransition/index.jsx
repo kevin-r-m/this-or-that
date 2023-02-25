@@ -11,6 +11,7 @@ function CompetitorTransition({ children, duration, state, className }) {
       classNames={className}
       nodeRef={nodeRef}
       unmountOnExit
+      appear
     >
       <div className="competitorTransition" ref={nodeRef}>
         {children}

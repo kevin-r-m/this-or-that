@@ -2,63 +2,69 @@
 
 .competitorTransition {
   position: absolute;
-  left: 50%;
+  left: 175%;
   top: 57%;
   transform: translate(-50%, -50%);
-  width: 95%;
+  width: 100%;
   display: flex;
   justify-content: center;
-  background-color: import.$placeholder-grey;
+  background-color: #47fff0;
   border-radius: import.$global-border-radius;
-  filter: drop-shadow(0px 0px 0px import.$placeholder-drop-shadow);
+  filter: drop-shadow(0px 0px 0px transparent);
+  transition: left 0.75s, width 1s, background-color 1s, filter 1s;
+  -webkit-transition: left 0.75s, width 1s, background-color 1s;
 
   &.voting-body-enter {
-    opacity: 0;
+    left: 50%;
   }
   &.voting-body-enter-active {
-    transition: all 0.75s;
-    -webkit-transition: all 0.75s;
-    opacity: 1;
+    width: 92%;
+    left: 50%;
     filter: drop-shadow(0px 2px 7px import.$placeholder-drop-shadow);
   }
   &.voting-body-enter-done {
+    width: 92%;
     transition: all 0.75s;
+    left: 50%;
     -webkit-transition: all 0.75s;
   }
   &.voting-body-exit {
-    opacity: 1;
   }
   &.voting-body-exit-active {
     left: -110%;
-    transition: all 0.75s;
-    -webkit-transition: all 0.75s;
-    opacity: 0;
+
     filter: drop-shadow(0px 2px 7px import.$placeholder-drop-shadow);
   }
   &.body-enter {
-    opacity: 0;
+    width: 95%;
+    background-color: import.$placeholder-grey;
     filter: drop-shadow(0px 2px 7px import.$placeholder-drop-shadow);
   }
   &.body-enter-active {
-    transition: all 0.75s;
-    -webkit-transition: all 0.75s;
-    opacity: 1;
+    left: 50%;
     filter: drop-shadow(0px 2px 7px import.$placeholder-drop-shadow);
   }
   &.body-enter-done {
-    transition: all 0.75s;
-    -webkit-transition: all 0.75s;
-    filter: drop-shadow(0px 0px 0px import.$placeholder-drop-shadow);
-  }
-  &.body-exit {
-    opacity: 1;
+    width: 95%;
+    background-color: import.$placeholder-grey;
+    left: 50%;
+    filter: drop-shadow(0px 0px 0px transparent);
   }
   &.body-exit-active {
-    transition: all 0.75s;
-    -webkit-transition: all 0.75s;
-    opacity: 0;
+    width: 100%;
     max-width: 95%;
     left: -110%;
     filter: drop-shadow(0px 2px 7px import.$placeholder-drop-shadow);
+  }
+  &.body-appear {
+    width: 95%;
+    left: 50%;
+    background-color: import.$placeholder-grey;
+  }
+
+  &.body-appear-done {
+    width: 95%;
+    left: 50%;
+    background-color: import.$placeholder-grey;
   }
 }
