@@ -9,6 +9,12 @@
   border: none;
   color: import.$black;
   padding: 0 import.em(8);
+  position: relative;
+  overflow: hidden;
+
+  .text {
+    z-index: 1;
+  }
 
   &.vote {
     width: 100%;
