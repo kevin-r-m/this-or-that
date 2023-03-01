@@ -9,7 +9,14 @@ function Container() {
 
   return (
     <section className={styles.competitorCard}>
-      <CompetitorCard competitorName={competitionState.competitorOne.name} />
+      <CompetitorCard
+        competitorName={competitionState.competitorOne.name}
+        key={competitionState.competitorOne.name}
+      />
+      <CompetitorCard
+        competitorName={competitionState.competitorTwo.name}
+        key={competitionState.competitorTwo.name}
+      />
     </section>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./svg.module.scss";
 import classNames from "classnames/bind";
 
-function ButtonSVG({ callback, vote }) {
+function ButtonSVG({ buttonClicked, vote }) {
   const cx = classNames.bind(styles);
 
   const svgStyles = cx({
@@ -11,7 +11,7 @@ function ButtonSVG({ callback, vote }) {
 
   const circleStyles = cx({
     clockwiseCircle: true,
-    animate: callback && vote,
+    animate: buttonClicked && vote,
   });
 
   return (
