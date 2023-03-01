@@ -5,15 +5,15 @@ import styles from "./button.module.scss";
 import classNames from "classnames/bind";
 import ButtonSVG from "./SVG/Svg";
 
-function Button({ callback, value, vote, confirm, decline }) {
+function Button({ callback, value, competitorName, vote, confirm, decline }) {
   const cx = classNames.bind(styles);
-  const [state, setState] = useState(false);
+  const [active, setActive] = useState(false);
 
   function handleClick() {
-    setState(!state);
+    setActive(!active);
 
     if (vote) {
-      setTimeout(callback, 500);
+      setTimeout(() => callback(competitorName), 500);
       return;
     }
     callback();
@@ -28,7 +28,7 @@ function Button({ callback, value, vote, confirm, decline }) {
 
   return (
     <button onClick={handleClick} className={buttonClass}>
-      <ButtonSVG callback={state} vote={vote} />
+      <ButtonSVG buttonClicked={active} vote={vote} />
       <span className={styles.text}>{value}</span>
     </button>
   );
