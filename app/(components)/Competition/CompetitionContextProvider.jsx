@@ -30,6 +30,7 @@ export function CompetitionContextProvider({ children }) {
   };
 
   function handleVoting(key) {
+    //this will need to be updated with further logic for handling cookie setting and validation
     setIsVoting((prevState) => !prevState);
 
     if (!key) {
