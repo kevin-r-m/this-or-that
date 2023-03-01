@@ -1,7 +1,8 @@
 "use client";
 
-import { createContext, useContext, useState, useRef } from "react";
+import { createContext, useContext, useState, useRef, useEffect } from "react";
 import data from "../../(data)/competition.json";
+import { setCookie, getCookie } from "@/app/(functions)";
 
 const CompetitionContext = createContext();
 
@@ -16,7 +17,13 @@ export function CompetitionContextProvider({ children }) {
   const [votingForOne, setVotingForOne] = useState(false);
   const [votingForTwo, setVotingForTwo] = useState(false);
   const [competitionState] = useState(data);
+  const [votedToday, setVotedToday] = useState(false);
   const duration = 5000;
+  const cookieName = "votedToday";
+
+  useEffect(() => {
+    setVotedToday(getCookie(cookieName));
+  }, []);
 
   const contextValues = {
     competitionState,
@@ -28,6 +35,8 @@ export function CompetitionContextProvider({ children }) {
     votingForOne,
     votingForTwo,
     handleVotingReset,
+    handleVotingConfirmation,
+    votedToday,
   };
 
   function handleVoting(key) {
@@ -54,6 +63,14 @@ export function CompetitionContextProvider({ children }) {
   function handleVotingReset() {
     setVotingForOne(false);
     setVotingForTwo(false);
+  }
+
+  function handleVotingConfirmation() {
+    const expireDays = 15;
+    setCookie(cookieName, true, expireDays);
+    setVotingForOne(false);
+    setVotingForTwo(false);
+    setVotedToday(true);
   }
 
   return (
