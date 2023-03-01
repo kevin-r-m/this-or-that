@@ -28,5 +28,9 @@
 
   &.decline {
     background-color: #ff638487;
+
+    &:active {
+      background-color: #ff6385d0;
+    }
   }
 }
