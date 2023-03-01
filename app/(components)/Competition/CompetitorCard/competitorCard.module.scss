@@ -8,6 +8,7 @@
   padding: import.em(8);
   filter: drop-shadow(0 5px 5px import.$placeholder-drop-shadow);
   min-height: 200px;
+  position: relative;
 
   &:first-of-type {
     margin-bottom: import.em(24);
