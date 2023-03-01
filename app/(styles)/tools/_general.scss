@@ -7,6 +7,10 @@ body {
     rgb(91 251 180 / 51%),
     rgba(255, 255, 255, 0)
   );
+
+  main {
+    overflow-x: hidden;
+  }
 }
 
 section {
