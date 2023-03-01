@@ -4,13 +4,9 @@ import Body from "./Body";
 import Headline from "./Headline";
 import styles from "./competitorCard.module.scss";
 import VotingBody from "./VotingBody";
-import { useCompetitionContext } from "../CompetitionContextProvider";
 import CompetitorTransition from "../../../(hooks)/CompetitorTransition";
 
 function CompetitorCard({ competitorName, competitorState }) {
-  const { isVoting } = useCompetitionContext();
-  console.log(competitorState);
-
   return (
     <>
       <div className={styles.wrapper}>
