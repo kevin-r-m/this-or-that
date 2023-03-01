@@ -12,7 +12,11 @@ function VotingBody({ competitorName }) {
     <div className={styles.votingBody}>
       <p>Alright, confirm you vote for {competitorName}?</p>
       <div className={styles.buttonsContainer}>
-        <Button callback={handleVoting} value="Confirm" confirm />
+        <Button
+          callback={() => console.log("placeholder")}
+          value="Confirm"
+          confirm
+        />
         <Button callback={handleVotingReset} value="Take me back" decline />
       </div>
     </div>

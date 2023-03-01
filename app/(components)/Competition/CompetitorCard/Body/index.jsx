@@ -15,7 +15,10 @@ function Body({ competitorName, competitorState }) {
         <Image alt="" source={placeholderImage} />
       </div>
       <div className={styles.buttonsContainer}>
-        <Button value="Go to profile" />
+        <Button
+          callback={() => console.log("placeholder")}
+          value="Go to profile"
+        />
         <Button
           callback={handleVoting}
           value="Vote"
