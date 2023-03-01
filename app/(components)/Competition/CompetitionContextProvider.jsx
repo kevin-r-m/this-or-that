@@ -15,7 +15,7 @@ export function CompetitionContextProvider({ children }) {
   const [isVoting, setIsVoting] = useState(false);
   const [votingForOne, setVotingForOne] = useState(false);
   const [votingForTwo, setVotingForTwo] = useState(false);
-  const [competitionState] = useState(() => appendState());
+  const [competitionState] = useState(data);
   const duration = 5000;
 
   const contextValues = {
@@ -25,20 +25,9 @@ export function CompetitionContextProvider({ children }) {
     bodyRef,
     voteBodyRef,
     duration,
+    votingForOne,
+    votingForTwo,
   };
-
-  function appendState() {
-    data.competitorOne.state = {
-      value: votingForOne,
-      function: setVotingForOne,
-    };
-    data.competitorTwo.state = {
-      value: votingForTwo,
-      function: setVotingForTwo,
-    };
-
-    return data;
-  }
 
   function handleVoting(key) {
     setIsVoting((prevState) => !prevState);
@@ -50,18 +39,12 @@ export function CompetitionContextProvider({ children }) {
     if (key === competitionState.competitorOne.name) {
       setVotingForOne((prevState) => !prevState);
       setVotingForTwo(false);
-      competitionState.competitorOne.state.value =
-        !competitionState.competitorOne.state.value;
-      competitionState.competitorTwo.state.value = false;
       return;
     }
 
     if (key === competitionState.competitorTwo.name) {
       setVotingForTwo((prevState) => !prevState);
       setVotingForOne(false);
-      competitionState.competitorTwo.state.value =
-        !competitionState.competitorTwo.state.value;
-      competitionState.competitorOne.state.value = false;
       return;
     }
   }
