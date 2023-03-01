@@ -3,7 +3,7 @@
 import { useState } from "react";
 import styles from "./button.module.scss";
 import classNames from "classnames/bind";
-import ButtonSVG from "./SVG/Svg";
+import ButtonSVG from "./ButtonSvg";
 
 function Button({ callback, value, competitorName, vote, confirm, decline }) {
   const cx = classNames.bind(styles);
