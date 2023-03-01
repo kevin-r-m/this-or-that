@@ -14,11 +14,11 @@ function Container() {
         competitorState={competitionState.competitorOne.state.value}
         key={competitionState.competitorOne.name}
       />
-      {/* <CompetitorCard
+      <CompetitorCard
         competitorName={competitionState.competitorTwo.name}
         competitorState={competitionState.competitorTwo.state.value}
         key={competitionState.competitorTwo.name}
-      /> */}
+      />
     </section>
   );
 }

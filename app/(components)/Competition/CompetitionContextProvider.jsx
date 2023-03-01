@@ -49,14 +49,23 @@ export function CompetitionContextProvider({ children }) {
 
     if (key === competitionState.competitorOne.name) {
       setVotingForOne((prevState) => !prevState);
+      setVotingForTwo(false);
+      competitionState.competitorOne.state.value =
+        !competitionState.competitorOne.state.value;
+      competitionState.competitorTwo.state.value = false;
       return;
     }
 
     if (key === competitionState.competitorTwo.name) {
       setVotingForTwo((prevState) => !prevState);
+      setVotingForOne(false);
+      competitionState.competitorTwo.state.value =
+        !competitionState.competitorTwo.state.value;
+      competitionState.competitorOne.state.value = false;
       return;
     }
   }
+
   return (
     <CompetitionContext.Provider value={contextValues}>
       {children}
