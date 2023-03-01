@@ -27,6 +27,7 @@ export function CompetitionContextProvider({ children }) {
     duration,
     votingForOne,
     votingForTwo,
+    handleVotingReset,
   };
 
   function handleVoting(key) {
@@ -48,6 +49,11 @@ export function CompetitionContextProvider({ children }) {
       setVotingForOne(false);
       return;
     }
+  }
+
+  function handleVotingReset() {
+    setVotingForOne(false);
+    setVotingForTwo(false);
   }
 
   return (
