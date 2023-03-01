@@ -11,8 +11,8 @@
   background-color: #47fff0;
   border-radius: import.$global-border-radius;
   filter: drop-shadow(0px 0px 0px transparent);
-  transition: left 0.75s, width 1s, background-color 1s, filter 1s;
-  -webkit-transition: left 0.75s, width 1s, background-color 1s;
+  transition: all 0.75s, width 1s, background-color 1s, filter 1s;
+  -webkit-transition: all 0.75s, width 1s, background-color 1s;
 
   &.voting-body-enter {
     left: 50%;
@@ -24,15 +24,10 @@
   }
   &.voting-body-enter-done {
     width: 92%;
-    transition: all 0.75s;
     left: 50%;
-    -webkit-transition: all 0.75s;
-  }
-  &.voting-body-exit {
   }
   &.voting-body-exit-active {
     left: -110%;
-
     filter: drop-shadow(0px 2px 7px import.$placeholder-drop-shadow);
   }
   &.body-enter {
