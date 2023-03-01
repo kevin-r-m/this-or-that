@@ -6,7 +6,7 @@ import styles from "./body.module.scss";
 import placeholderImage from "/public/images/placeholder-image.webp";
 import { useCompetitionContext } from "../../CompetitionContextProvider";
 
-function Body({ competitorName }) {
+function Body({ competitorName, competitorState }) {
   const { handleVoting } = useCompetitionContext();
 
   return (
@@ -21,6 +21,7 @@ function Body({ competitorName }) {
           value="Vote"
           vote
           competitorName={competitorName}
+          competitorState={competitorState}
         />
       </div>
     </div>

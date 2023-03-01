@@ -12,10 +12,10 @@ export function useCompetitionContext() {
 export function CompetitionContextProvider({ children }) {
   const bodyRef = useRef(null);
   const voteBodyRef = useRef(null);
-  const [competitionState] = useState(data);
   const [isVoting, setIsVoting] = useState(false);
   const [votingForOne, setVotingForOne] = useState(false);
   const [votingForTwo, setVotingForTwo] = useState(false);
+  const [competitionState] = useState(() => appendState());
   const duration = 5000;
 
   const contextValues = {
@@ -27,8 +27,22 @@ export function CompetitionContextProvider({ children }) {
     duration,
   };
 
+  function appendState() {
+    data.competitorOne.state = {
+      value: votingForOne,
+      function: setVotingForOne,
+    };
+    data.competitorTwo.state = {
+      value: votingForTwo,
+      function: setVotingForTwo,
+    };
+
+    return data;
+  }
+
   function handleVoting(key) {
     setIsVoting((prevState) => !prevState);
+
     if (!key) {
       return;
     }

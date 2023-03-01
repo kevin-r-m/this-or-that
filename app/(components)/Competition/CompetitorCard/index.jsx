@@ -7,8 +7,9 @@ import VotingBody from "./VotingBody";
 import { useCompetitionContext } from "../CompetitionContextProvider";
 import CompetitorTransition from "../../../(hooks)/CompetitorTransition";
 
-function CompetitorCard({ competitorName }) {
+function CompetitorCard({ competitorName, competitorState }) {
   const { isVoting } = useCompetitionContext();
+  console.log(competitorState);
 
   return (
     <>
@@ -17,15 +18,18 @@ function CompetitorCard({ competitorName }) {
 
         <CompetitorTransition
           duration={500}
-          state={isVoting}
+          state={competitorState}
           className={"body"}
         >
-          <Body competitorName={competitorName} />
+          <Body
+            competitorName={competitorName}
+            competitorState={competitorState}
+          />
         </CompetitorTransition>
 
         <CompetitorTransition
           duration={500}
-          state={!isVoting}
+          state={!competitorState}
           className={"voting-body"}
         >
           <VotingBody competitorName={competitorName} />
