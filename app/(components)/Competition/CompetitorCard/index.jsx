@@ -20,7 +20,7 @@ function CompetitorCard({ competitorName }) {
           state={isVoting}
           className={"body"}
         >
-          <Body />
+          <Body competitorName={competitorName} />
         </CompetitorTransition>
 
         <CompetitorTransition
