@@ -28,7 +28,7 @@ function Button({ callback, value, competitorName, vote, confirm, decline }) {
 
   return (
     <button onClick={handleClick} className={buttonClass}>
-      <ButtonSVG buttonClicked={active} vote={vote} />
+      {vote && <ButtonSVG buttonClicked={active} />}
       <span className={styles.text}>{value}</span>
     </button>
   );
