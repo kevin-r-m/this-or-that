@@ -6,7 +6,7 @@ import styles from "./body.module.scss";
 import placeholderImage from "/public/images/placeholder-image.webp";
 import { useCompetitionContext } from "../../CompetitionContextProvider";
 
-function Body() {
+function Body({ competitorName }) {
   const { handleVoting } = useCompetitionContext();
 
   return (
@@ -16,7 +16,12 @@ function Body() {
       </div>
       <div className={styles.buttonsContainer}>
         <Button value="Go to profile" />
-        <Button callback={handleVoting} value="Vote" vote />
+        <Button
+          callback={handleVoting}
+          value="Vote"
+          vote
+          competitorName={competitorName}
+        />
       </div>
     </div>
   );
