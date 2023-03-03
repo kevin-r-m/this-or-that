@@ -2,9 +2,7 @@
 export function setCookie(cookieName, value, expireDays) {
   const expireDate = new Date();
   expireDate.setDate(expireDate.getDate() + expireDays);
-  document.cookie = `${cookieName}=${encodeURIComponent(
-    value
-  )}; expires=${expireDate.toUTCString()}; Secure`;
+  document.cookie = `${cookieName}=[${value}, ${getTodaysDate()}]; expires=${expireDate.toUTCString()}; Secure`;
 }
 
 // Returns the matched cookie & value based on the passed arg
@@ -13,7 +11,11 @@ export function getCookie(cookieName) {
     new RegExp("(^| )" + cookieName + "=([^;]+)")
   );
   if (match) {
-    return true;
+    const today = getTodaysDate().toString();
+    const votedDate = JSON.parse(match[2])[1].toString();
+    if (today === votedDate) {
+      return true;
+    }
   }
   return false;
 }
