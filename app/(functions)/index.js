@@ -11,9 +11,8 @@ export function getCookie(cookieName) {
     new RegExp("(^| )" + cookieName + "=([^;]+)")
   );
   if (match) {
-    const today = getTodaysDate().toString();
     const votedDate = JSON.parse(match[2])[1].toString();
-    if (today === votedDate) {
+    if (checkCookieDate(votedDate)) {
       return true;
     }
   }
@@ -36,4 +35,12 @@ function handleDateFormat(date) {
   date = mm + dd + yyyy;
 
   return date;
+}
+
+function checkCookieDate(valueToCheck) {
+  const today = getTodaysDate().toString();
+  if (today === valueToCheck) {
+    return true;
+  }
+  return false;
 }
