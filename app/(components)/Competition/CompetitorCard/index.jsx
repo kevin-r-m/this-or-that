@@ -31,7 +31,6 @@ function CompetitorCard({ competitorName, competitorState }) {
           <VotingBody competitorName={competitorName} />
         </CompetitorTransition>
       </div>
-      <div></div>
     </>
   );
 }
