@@ -1,0 +1,11 @@
+@use "../../../\(styles\)/import.scss";
+
+.wrapper {
+  background-color: import.$placeholder-grey;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: import.em(8);
+  filter: drop-shadow(0 5px 5px import.$placeholder-drop-shadow);
+  position: relative;
+}
