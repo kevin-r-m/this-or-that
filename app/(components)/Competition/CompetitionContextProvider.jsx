@@ -18,7 +18,7 @@ export function CompetitionContextProvider({ children }) {
   const [votingForTwo, setVotingForTwo] = useState(false);
   const [competitionState] = useState(data);
   const [votingState, setVotingState] = useState({
-    votedToday: false,
+    votedToday: null,
     votedFor: null,
   });
   const duration = 5000;
