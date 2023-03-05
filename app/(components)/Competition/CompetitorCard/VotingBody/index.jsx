@@ -10,10 +10,15 @@ function VotingBody({ competitorName }) {
     useCompetitionContext();
 
   return (
-    <div className={styles.votingBody}>
-      <p>Alright, confirm you vote for {competitorName}?</p>
+    <div className={"voting-body " + styles.votingBody}>
+      <p>Alright, confirm your vote for {competitorName}?</p>
       <div className={styles.buttonsContainer}>
-        <Button callback={handleVotingConfirmation} value="Confirm" confirm />
+        <Button
+          competitorName={competitorName}
+          callback={handleVotingConfirmation}
+          value="Confirm"
+          confirm
+        />
         <Button callback={handleVotingReset} value="Take me back" decline />
       </div>
     </div>
