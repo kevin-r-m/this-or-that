@@ -2,16 +2,17 @@
 
 import { useCompetitionContext } from "../CompetitionContextProvider";
 import CompetitorCard from "../CompetitorCard";
+import VotedCard from "../VotedCard";
 import styles from "./container.module.scss";
 
 function Container() {
-  const { competitionState, votingForOne, votingForTwo, votedToday } =
+  const { competitionState, votingForOne, votingForTwo, votingState } =
     useCompetitionContext();
 
   return (
-    <section className={styles.competitorCard}>
-      {votedToday ? (
-        <p>You voted</p>
+    <section className={styles.competitorCards}>
+      {votingState.votedToday ? (
+        <VotedCard />
       ) : (
         <>
           <CompetitorCard
