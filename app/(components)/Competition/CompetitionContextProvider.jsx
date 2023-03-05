@@ -22,11 +22,12 @@ export function CompetitionContextProvider({ children }) {
     votedFor: null,
   });
   const duration = 5000;
-  const cookieName = "votedToday";
+  const cookieName = "votingInformation";
+  const valueFromCookie = "votedFor";
 
   useEffect(() => {
     setVotingState(() => ({
-      votedFor: getCookie_withValue(cookieName, "votedFor"),
+      votedFor: getCookie_withValue(cookieName, valueFromCookie),
       votedToday: getCookie(cookieName),
     }));
   }, []);
