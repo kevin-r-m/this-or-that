@@ -12,6 +12,7 @@ export function getCookie(cookieName) {
   );
   if (match) {
     const votedDate = JSON.parse(match[2].toString())[2];
+    // returns boolean value
     return checkCookieDate(votedDate);
   }
 }
