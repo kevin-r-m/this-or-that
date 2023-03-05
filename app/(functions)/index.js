@@ -1,8 +1,8 @@
 // Function to set cookies
-export function setCookie(cookieName, value, expireDays) {
+export function setCookie(cookieName, value, expireDays, votedFor) {
   const expireDate = new Date();
   expireDate.setDate(expireDate.getDate() + expireDays);
-  document.cookie = `${cookieName}=[${value}, ${getTodaysDate()}]; expires=${expireDate.toUTCString()}; Secure`;
+  document.cookie = `${cookieName}=[${value}, "${votedFor}", "${getTodaysDate()}"]; expires=${expireDate.toUTCString()}; Secure`;
 }
 
 // Returns the matched cookie & value based on the passed arg
@@ -11,10 +11,22 @@ export function getCookie(cookieName) {
     new RegExp("(^| )" + cookieName + "=([^;]+)")
   );
   if (match) {
-    const votedDate = JSON.parse(match[2])[1].toString();
-    if (checkCookieDate(votedDate)) {
-      return true;
+    const votedDate = JSON.parse(match[2].toString())[2];
+    return checkCookieDate(votedDate);
+  }
+}
+
+// Returns the matched cookie & value based on the passed arg
+export function getCookie_withValue(cookieName, value) {
+  const match = document.cookie.match(
+    new RegExp("(^| )" + cookieName + "=([^;]+)")
+  );
+  if (match) {
+    let returnData;
+    if (value === "votedFor") {
+      returnData = JSON.parse(match[2].toString())[1].toString();
     }
+    return returnData;
   }
   return false;
 }
@@ -37,6 +49,7 @@ function handleDateFormat(date) {
   return date;
 }
 
+// Helper function for checking dates as string values, no special characters
 function checkCookieDate(valueToCheck) {
   const today = getTodaysDate().toString();
   if (today === valueToCheck) {
