@@ -8,4 +8,11 @@
   padding: import.em(8);
   filter: drop-shadow(0 5px 5px import.$placeholder-drop-shadow);
   position: relative;
+
+  .emoji {
+    font-size: 28px;
+    line-height: 0;
+    position: relative;
+    bottom: -4px;
+  }
 }
