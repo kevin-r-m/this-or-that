@@ -15,7 +15,7 @@ function CompetitorCard({ competitorName, competitorState }) {
         <CompetitorTransition
           duration={500}
           state={competitorState}
-          className={"body"}
+          className={"body-one"}
         >
           <Body
             competitorName={competitorName}
@@ -26,7 +26,7 @@ function CompetitorCard({ competitorName, competitorState }) {
         <CompetitorTransition
           duration={500}
           state={!competitorState}
-          className={"voting-body"}
+          className={"body-two"}
         >
           <VotingBody competitorName={competitorName} />
         </CompetitorTransition>
