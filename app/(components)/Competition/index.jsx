@@ -1,7 +1,7 @@
 import { CompetitionContextProvider } from "./CompetitionContextProvider";
 import Container from "./Container";
 
-function index() {
+function Competition() {
   return (
     <CompetitionContextProvider>
       <Container />
@@ -9,4 +9,4 @@ function index() {
   );
 }
 
-export default index;
+export default Competition;
