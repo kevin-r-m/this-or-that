@@ -1,8 +1,8 @@
 @use "../../\(styles\)/import.scss";
 
-.competitorTransition {
+.transition {
   position: absolute;
-  left: 175%;
+  left: 50%;
   top: 20%;
   transform: translate(-50%);
   width: 100%;
@@ -13,6 +13,10 @@
   filter: drop-shadow(0px 0px 0px transparent);
   transition: all 0.75s, width 1s, background-color 1s, filter 1s;
   -webkit-transition: all 0.75s, width 1s, background-color 1s;
+
+  &.appear {
+    left: 175%;
+  }
 
   &.body-two-enter {
     left: 50%;
@@ -53,5 +57,9 @@
   &.body-one-appear-done {
     left: 50%;
     background-color: import.$placeholder-grey;
+  }
+
+  &.competition {
+    top: 0;
   }
 }

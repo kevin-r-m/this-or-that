@@ -19,6 +19,8 @@ function Container() {
           duration={500}
           state={!votingState.votedToday}
           className={"body-one"}
+          competition
+          appear
         >
           <VotedCard />
         </CompetitorTransition>
@@ -26,6 +28,8 @@ function Container() {
           duration={500}
           state={votingState.votedToday}
           className={"body-two"}
+          competition
+          appear
         >
           <CompetitorCard
             competitorName={competitionState.competitorOne.name}

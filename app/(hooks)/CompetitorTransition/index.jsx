@@ -1,9 +1,22 @@
 import React, { useRef } from "react";
 import { CSSTransition } from "react-transition-group";
+import classNames from "classnames";
 import "./competitorTransition.scss";
 
-function CompetitorTransition({ children, duration, state, className }) {
+function CompetitorTransition({
+  children,
+  duration,
+  state,
+  className,
+  competition,
+  appear,
+}) {
   const nodeRef = useRef(null);
+  const transitionClasses = classNames({
+    transition: true,
+    competition: competition,
+    appear: appear,
+  });
   return (
     <CSSTransition
       in={!state}
@@ -11,9 +24,9 @@ function CompetitorTransition({ children, duration, state, className }) {
       classNames={className}
       nodeRef={nodeRef}
       unmountOnExit
-      appear
+      appear={appear}
     >
-      <div className="competitorTransition" ref={nodeRef}>
+      <div className={transitionClasses} ref={nodeRef}>
         {children}
       </div>
     </CSSTransition>
