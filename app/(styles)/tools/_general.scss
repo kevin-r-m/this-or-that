@@ -1,4 +1,5 @@
 @use "./functions";
+@use "./colors";
 
 body {
   padding-bottom: functions.em(30);
@@ -27,4 +28,11 @@ section {
 
 .rotate {
   transform: rotate(225deg) !important;
+}
+
+hr {
+  height: 3px;
+  border: none;
+  border-radius: 5px;
+  background-color: colors.$placeholder-dark-grey;
 }
