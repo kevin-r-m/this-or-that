@@ -1,0 +1,29 @@
+@use "../../../../\(styles\)/import.scss";
+
+.container {
+  background-color: import.$placeholder-light-grey;
+  border-radius: import.$global-border-radius;
+  padding: import.em(4);
+  margin-top: import.em(8);
+  position: relative;
+
+  &.totalVotes {
+    width: fit-content;
+    align-self: flex-end;
+  }
+
+  &.votes {
+    width: fit-content;
+    padding-right: import.em(25);
+  }
+
+  &.winner {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      background-image: url("/app/\(bg-images\)/trophy.svg");
+    }
+  }
+}
