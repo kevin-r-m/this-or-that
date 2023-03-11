@@ -7,6 +7,7 @@ import TotalVotes from "../TotalVotes";
 import VoteTime from "../VoteTime";
 import Graph from "../Graph";
 import { useMetricsContext } from "../MetricsContextProvider";
+import Yesterday from "../Yesterday";
 
 function Container() {
   const { metricsRef } = useMetricsContext();
@@ -20,6 +21,8 @@ function Container() {
         <VoteTime />
       </div>
       <Graph />
+      <hr />
+      <Yesterday />
     </section>
   );
 }
