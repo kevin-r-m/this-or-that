@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 0.625rem;
+  justify-content: space-between;
+  column-gap: 10px;
+
+  .outcomeContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 0.66;
+  }
+
+  .votesContainer {
+    flex: 0.33;
+  }
+}
