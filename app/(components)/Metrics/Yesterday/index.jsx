@@ -8,7 +8,8 @@ import dislike from "/public/images/dislike.svg";
 import { useMetricsContext } from "../MetricsContextProvider";
 
 function Yesterday() {
-  const { yesterdayRef } = useMetricsContext();
+  const { yesterdayRef, competitionState } = useMetricsContext();
+  const { yesterday } = competitionState;
   const imageSize = 35;
 
   return (
@@ -22,7 +23,7 @@ function Yesterday() {
             src={trophy}
             alt="winner"
           />
-          <DataRow content={"Iceberg Lettuce"} winner />
+          <DataRow content={yesterday.winner[0]} winner />
         </div>
         <div className={styles.outcomeRow}>
           <Image
@@ -31,15 +32,15 @@ function Yesterday() {
             src={dislike}
             alt="loser"
           />
-          <DataRow content={"Peeps"} loser />
+          <DataRow content={yesterday.loser[0]} loser />
         </div>
         <DataRow content={"Total Votes:"} totalVotes />
       </div>
       <div className={styles.votesContainer}>
         <h3>Votes</h3>
-        <DataRow content={"215"} votes />
-        <DataRow content={"146"} votes />
-        <DataRow content={"361"} votes />
+        <DataRow content={yesterday.winner[1]} votes />
+        <DataRow content={yesterday.loser[1]} votes />
+        <DataRow content={yesterday.winner[1] + yesterday.loser[1]} votes />
       </div>
     </div>
   );

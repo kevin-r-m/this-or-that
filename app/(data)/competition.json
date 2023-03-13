@@ -10,5 +10,9 @@
         "winner": false
     },
     "totalVotes": 736,
-    "leader": "Batman"
+    "leader": "Batman",
+    "yesterday": {
+        "winner": ["Iceberg Lettuce", 215],
+        "loser": ["Peeps", 146]
+    }
 }
