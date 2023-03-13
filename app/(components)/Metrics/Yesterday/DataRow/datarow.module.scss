@@ -6,15 +6,11 @@
   padding: import.em(4);
   margin-top: import.em(8);
   position: relative;
+  width: 100%;
 
   &.totalVotes {
     width: fit-content;
     align-self: flex-end;
-  }
-
-  &.votes {
-    width: fit-content;
-    padding-right: import.em(25);
   }
 
   &.winner {

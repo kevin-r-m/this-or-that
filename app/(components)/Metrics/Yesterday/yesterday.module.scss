@@ -1,3 +1,5 @@
+@use "../../../\(styles\)/import.scss";
+
 .container {
   display: flex;
   align-items: flex-start;
@@ -9,9 +11,21 @@
     display: flex;
     flex-direction: column;
     flex: 0.66;
+
+    .outcomeRow {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: import.em(8);
+        position: relative;
+        top: 6px;
+      }
+    }
   }
 
   .votesContainer {
     flex: 0.33;
+    text-align: center;
   }
 }
