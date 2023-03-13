@@ -27,18 +27,21 @@ function Nav() {
         <Link
           href="/competition"
           className={pathname === "/competition" ? styles.active : ""}
+          onClick={toggleMenu}
         >
           Today
         </Link>
         <Link
           href="/competitors"
           className={pathname === "/competitors" ? styles.active : ""}
+          onClick={toggleMenu}
         >
           Competitors
         </Link>
         <Link
           href="/leaderboards"
           className={pathname === "/leaderboards" ? styles.active : ""}
+          onClick={toggleMenu}
         >
           Leaderboards
         </Link>
