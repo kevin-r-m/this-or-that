@@ -14,6 +14,7 @@ export function MetricsContextProvider({ children }) {
   const expandedRef = useRef(false);
   const metricsRef = useRef();
   const graphRef = useRef();
+  const yesterdayRef = useRef();
 
   const contextValues = {
     competitionState,
@@ -22,6 +23,7 @@ export function MetricsContextProvider({ children }) {
     handleMetricToggle,
     graphRef,
     metricsRef,
+    yesterdayRef,
   };
 
   function calculateVoteDifference() {
@@ -45,9 +47,10 @@ export function MetricsContextProvider({ children }) {
   function handleMetricToggle(e) {
     const { target } = e;
     const graphHeight = graphRef.current.offsetHeight;
+    const yesterdayHeight = yesterdayRef.current.offsetHeight;
     const metricsHeight = metricsRef.current.offsetHeight;
     const metricStaticHeight = 170;
-    const paddingBuffer = 200;
+    const paddingBuffer = 30;
     const animation = {
       duration: 250,
       iterations: 1,
@@ -57,7 +60,9 @@ export function MetricsContextProvider({ children }) {
     target.classList.toggle("rotate");
     if (!expandedRef.current) {
       animationSettings = {
-        height: `${metricsHeight + (graphHeight + paddingBuffer)}px`,
+        height: `${
+          metricsHeight + (graphHeight + yesterdayHeight + paddingBuffer)
+        }px`,
       };
       expandedRef.current = true;
     } else {
