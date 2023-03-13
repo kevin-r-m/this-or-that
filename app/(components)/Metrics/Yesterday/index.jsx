@@ -1,13 +1,38 @@
+"use client";
+
+import Image from "next/image";
 import DataRow from "./DataRow";
 import styles from "./yesterday.module.scss";
+import trophy from "/public/images/trophy.svg";
+import dislike from "/public/images/dislike.svg";
+import { useMetricsContext } from "../MetricsContextProvider";
 
 function Yesterday() {
+  const { yesterdayRef } = useMetricsContext();
+  const imageSize = 35;
+
   return (
-    <div className={styles.container}>
+    <div ref={yesterdayRef} className={styles.container}>
       <div className={styles.outcomeContainer}>
         <h3>Yesterday&apos;s Outcome</h3>
-        <DataRow content={"Iceberg Lettuce"} winner />
-        <DataRow content={"Peeps"} loser />
+        <div className={styles.outcomeRow}>
+          <Image
+            height={imageSize}
+            width={imageSize}
+            src={trophy}
+            alt="winner"
+          />
+          <DataRow content={"Iceberg Lettuce"} winner />
+        </div>
+        <div className={styles.outcomeRow}>
+          <Image
+            height={imageSize}
+            width={imageSize}
+            src={dislike}
+            alt="loser"
+          />
+          <DataRow content={"Peeps"} loser />
+        </div>
         <DataRow content={"Total Votes:"} totalVotes />
       </div>
       <div className={styles.votesContainer}>
