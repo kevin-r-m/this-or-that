@@ -1,13 +1,13 @@
 import Link from "next/link";
 import styles from "./competitor.module.scss";
 
-function index() {
+function Competitor({ name }) {
   return (
     <Link href="#" className={styles.wrapper}>
       <div className={styles.icon}></div>
-      <p>Batman</p>
+      <p>{name}</p>
     </Link>
   );
 }
 
-export default index;
+export default Competitor;

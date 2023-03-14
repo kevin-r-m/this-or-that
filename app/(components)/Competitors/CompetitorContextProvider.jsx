@@ -1,6 +1,7 @@
 "use client";
 
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
+import data from "../../(data)/competitors.json";
 
 const CompetitorContext = createContext();
 
@@ -9,7 +10,8 @@ export function useCompetitorContext() {
 }
 
 export function CompetitorContextProvider({ children }) {
-  const contextValues = {};
+  const [competitorData, setCompetitorData] = useState(data);
+  const contextValues = { competitorData };
 
   return (
     <CompetitorContext.Provider value={contextValues}>

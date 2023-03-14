@@ -1,0 +1,22 @@
+@use "../../../\(styles\)/import";
+
+.form {
+  margin: import.em(16) 0;
+  display: flex;
+
+  input {
+    border: none;
+    background-color: import.$placeholder-light-grey;
+    padding: import.em(8);
+    border-radius: import.$global-border-radius;
+
+    &[type="text"] {
+      flex: 1;
+      margin-right: import.em(10);
+    }
+
+    &[type="submit"] {
+      padding: import.em(8) import.em(20);
+    }
+  }
+}
