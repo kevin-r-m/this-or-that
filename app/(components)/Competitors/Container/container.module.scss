@@ -2,13 +2,19 @@
 
 .wrapper {
   background-color: import.$placeholder-grey;
-  display: flex;
-  flex-direction: column;
   padding: import.em(8);
   border-radius: import.$global-border-radius;
-  overflow: auto;
-  row-gap: 8px;
-  max-height: 55vh;
+
+  .scroller {
+    row-gap: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: import.em(8);
+    background-color: import.$placeholder-grey;
+    border-radius: import.$global-border-radius;
+    max-height: 450px;
+  }
 }
 
 .buttonContainer {

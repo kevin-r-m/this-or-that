@@ -13,9 +13,11 @@ function Container() {
     <section>
       <Search />
       <div className={styles.wrapper}>
-        {competitorData.map((competitor) => (
-          <Competitor key={competitor.id} name={competitor.name} />
-        ))}
+        <div className={styles.scroller}>
+          {competitorData.map((competitor) => (
+            <Competitor key={competitor.id} name={competitor.name} />
+          ))}
+        </div>
       </div>
       <div className={styles.buttonContainer}>
         <button className={styles.next}>Next --&gt;</button>
