@@ -1,0 +1,9 @@
+@use "../../../\(styles\)/import.scss";
+
+.wrapper {
+  background-color: import.$placeholder-grey;
+  display: flex;
+  flex-direction: column;
+  padding: import.em(8);
+  border-radius: import.$global-border-radius;
+}
