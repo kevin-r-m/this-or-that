@@ -1,9 +1,9 @@
 import Link from "next/link";
 import styles from "./competitor.module.scss";
 
-function Competitor({ name }) {
+function Competitor({ name, id }) {
   return (
-    <Link href="#" className={styles.wrapper}>
+    <Link href={`/competitors/${id}`} className={styles.wrapper}>
       <div className={styles.icon}></div>
       <p>{name}</p>
     </Link>

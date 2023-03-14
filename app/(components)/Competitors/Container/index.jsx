@@ -15,7 +15,11 @@ function Container() {
       <div className={styles.wrapper}>
         <div className={styles.scroller}>
           {competitorData.map((competitor) => (
-            <Competitor key={competitor.id} name={competitor.name} />
+            <Competitor
+              key={competitor.id}
+              id={competitor.id}
+              name={competitor.name}
+            />
           ))}
         </div>
       </div>
