@@ -8,10 +8,21 @@ import AnimatedButton from "./AnimatedButton";
 
 function Nav() {
   const pathname = usePathname();
-  const elementRef = useRef();
+  const navMenuRef = useRef();
+  const animatedButtonRef = useRef();
+
+  function animateButton(reference) {
+    const { current } = reference;
+    current.classList.toggle(styles.opened);
+    current.setAttribute(
+      "aria-expanded",
+      current.classList.contains(styles.opened)
+    );
+  }
 
   function toggleMenu() {
-    const elementClasses = elementRef.current.classList;
+    animateButton(animatedButtonRef);
+    const elementClasses = navMenuRef.current.classList;
     elementClasses.toggle(styles.expanded);
     if (elementClasses.contains(styles.expanded)) {
       document.querySelector("body").style.overflow = "hidden";
@@ -22,8 +33,8 @@ function Nav() {
 
   return (
     <nav className={"container " + styles.nav}>
-      <AnimatedButton callback={toggleMenu} />
-      <div ref={elementRef} className={styles.navItems}>
+      <AnimatedButton buttonRef={animatedButtonRef} toggleMenu={toggleMenu} />
+      <div ref={navMenuRef} className={styles.navItems}>
         <Link
           href="/competition"
           className={pathname === "/competition" ? styles.active : ""}
