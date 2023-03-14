@@ -8,7 +8,7 @@
   border-radius: import.$global-border-radius;
   overflow: auto;
   row-gap: 8px;
-  max-height: 600px;
+  max-height: 55vh;
 }
 
 .buttonContainer {
@@ -22,5 +22,6 @@
     border: none;
     background-color: import.$placeholder-grey;
     border-radius: import.$global-border-radius;
+    color: import.$black;
   }
 }
