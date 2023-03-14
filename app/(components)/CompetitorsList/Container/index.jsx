@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import Competitor from "../Competitor";
+import CompetitorRow from "../CompetitorRow";
 import styles from "./container.module.scss";
-import { useCompetitorContext } from "../CompetitorContextProvider";
+import { useCompetitorListContext } from "../CompetitorListContextProvider";
 import Search from "../Search";
 
 function Container() {
-  const { competitorData } = useCompetitorContext();
+  const { competitorData } = useCompetitorListContext();
 
   return (
     <section>
@@ -15,7 +15,11 @@ function Container() {
       <div className={styles.wrapper}>
         <div className={styles.scroller}>
           {competitorData.map((competitor) => (
-            <Competitor key={competitor.id} name={competitor.name} />
+            <CompetitorRow
+              key={competitor.id}
+              id={competitor.id}
+              name={competitor.name}
+            />
           ))}
         </div>
       </div>
