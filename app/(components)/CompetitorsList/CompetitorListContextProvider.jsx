@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState } from "react";
-import data from "../../(data)/competitors.json";
+import data from ".././../(data)/competitors.json";
 
 const CompetitorListContext = createContext();
 
@@ -10,13 +10,11 @@ export function useCompetitorListContext() {
 }
 
 export function CompetitorListContextProvider({ children }) {
-  const [competitorData, setCompetitorData] = useState(data);
-  const contextValues = { competitorData, handleCompetitorQuery };
+  const [competitorData] = useState(data);
 
-  function handleCompetitorQuery(id) {
-    const competitor = competitorData.filter((item) => item.id === id);
-    return competitor;
-  }
+  const contextValues = {
+    competitorData,
+  };
 
   return (
     <CompetitorListContext.Provider value={contextValues}>

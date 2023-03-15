@@ -1,10 +1,10 @@
-import Competitors from "../(components)/Competitors";
+import CompetitorsList from "@/app/(components)/CompetitorsList";
 
 function page() {
   return (
     <>
       <h2>Competitors</h2>
-      <Competitors />
+      <CompetitorsList />
     </>
   );
 }

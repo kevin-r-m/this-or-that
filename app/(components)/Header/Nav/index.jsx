@@ -31,6 +31,12 @@ function Nav() {
     document.querySelector("body").style.overflow = "auto";
   }
 
+  function handleCompetitorsPath(path) {
+    if (path === "/competitors") {
+      return true;
+    }
+  }
+
   return (
     <nav className={"container " + styles.nav}>
       <AnimatedButton buttonRef={animatedButtonRef} toggleMenu={toggleMenu} />
@@ -44,7 +50,7 @@ function Nav() {
         </Link>
         <Link
           href="/competitors"
-          className={pathname === "/competitors" ? styles.active : ""}
+          className={pathname.startsWith("/competitors") ? styles.active : ""}
           onClick={toggleMenu}
         >
           Competitors
