@@ -23,12 +23,12 @@ function CompetitorBody({ id }) {
 
   return (
     <>
-      <h1>{competitor.name}</h1>
+      <h1>Batman</h1>
       <section>
         <div className={styles.image}>
           <Image
             src={placeholder}
-            alt={`Image of ${competitor.name}`}
+            alt={`Image of Batman`}
             sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
@@ -36,7 +36,7 @@ function CompetitorBody({ id }) {
             priority
           />
         </div>
-        <p>Random facts about {competitor.name}</p>
+        <p>Random facts about Batman</p>
       </section>
     </>
   );
