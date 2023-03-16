@@ -25,11 +25,20 @@ section {
 
 // keyframe animation to rotate the button
 .rotate {
+  -webkit-animation: rotateOpen 0.25s forwards !important;
   animation: rotateOpen 0.25s forwards !important;
 }
 
 //rotate the button
 
+@-webkit-keyframes rotateOpen {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(225deg);
+  }
+}
 @keyframes rotateOpen {
   0% {
     transform: rotate(0deg);
