@@ -57,7 +57,9 @@ export function MetricsContextProvider({ children }) {
       fill: "forwards",
     };
     let animationSettings;
-    target.classList.toggle("rotate");
+    requestAnimationFrame(() => {
+      target.classList.toggle("rotate");
+    });
     if (!expandedRef.current) {
       animationSettings = {
         height: `${
