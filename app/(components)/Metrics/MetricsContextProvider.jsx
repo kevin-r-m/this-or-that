@@ -71,7 +71,9 @@ export function MetricsContextProvider({ children }) {
       };
       expandedRef.current = false;
     }
-    metricsRef.current.animate(animationSettings, animation);
+    requestAnimationFrame(() => {
+      metricsRef.current.animate(animationSettings, animation);
+    });
   }
 
   return (
