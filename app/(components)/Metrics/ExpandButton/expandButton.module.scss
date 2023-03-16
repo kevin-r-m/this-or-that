@@ -9,11 +9,18 @@
   position: absolute;
   right: 5px;
   top: 0;
-  transform: rotate(0deg);
-  transition: all 0.25s ease;
 
   img {
-    transform: rotate(0deg);
-    transition: transform 0.25s;
+    animation: rotateClosed 0.25s forwards;
+  }
+
+  //rotate the button
+  @keyframes rotateClosed {
+    0% {
+      transform: rotate(225deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
   }
 }
