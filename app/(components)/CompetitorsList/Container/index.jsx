@@ -5,22 +5,12 @@ import CompetitorRow from "../CompetitorRow";
 import styles from "./container.module.scss";
 import { useCompetitorListContext } from "../CompetitorListContextProvider";
 import Search from "../Search";
+import ScrollShadow from "../../Global/ScrollShadow";
 
 function Container() {
   const { competitorData } = useCompetitorListContext();
   const wrapperRef = useRef(null);
   const scrollerRef = useRef(null);
-  const shadowRef = useRef(null);
-
-  useEffect(() => {
-    const contentScrollHeight =
-      scrollerRef.current.scrollHeight - wrapperRef.current.offsetHeight;
-
-    scrollerRef.current.addEventListener("scroll", function () {
-      const currentScroll = this.scrollTop / contentScrollHeight;
-      shadowRef.current.style.opacity = 1 - currentScroll;
-    });
-  }, []);
 
   return (
     <section>
@@ -35,7 +25,7 @@ function Container() {
             />
           ))}
         </div>
-        <div ref={shadowRef} className={styles.shadow}></div>
+        <ScrollShadow wrapperRef={wrapperRef} scrollerRef={scrollerRef} />
       </div>
       <div className={styles.buttonContainer}>
         <button className={styles.next}>Next --&gt;</button>
