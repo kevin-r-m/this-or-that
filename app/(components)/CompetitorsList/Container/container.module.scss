@@ -4,6 +4,7 @@
   background-color: import.$placeholder-grey;
   padding: import.em(8);
   border-radius: import.$global-border-radius;
+  position: relative;
 
   .scroller {
     row-gap: 8px;
@@ -13,7 +14,19 @@
     padding: import.em(8);
     background-color: import.$placeholder-grey;
     border-radius: import.$global-border-radius;
-    max-height: 450px;
+    max-height: 350px;
+  }
+
+  .shadow {
+    position: absolute;
+    left: 15px;
+    z-index: 100;
+    width: 91.5%;
+    height: 10px;
+    background: red;
+    bottom: 8px;
+    background: -webkit-linear-gradient(0deg, rgb(67 67 67 / 35%), transparent);
+    background: linear-gradient(0deg, rgb(67 67 67 / 35%), transparent);
   }
 }
 
