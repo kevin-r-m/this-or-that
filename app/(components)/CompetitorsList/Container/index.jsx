@@ -25,7 +25,7 @@ function Container() {
             />
           ))}
         </div>
-        <ScrollShadow wrapperRef={wrapperRef} scrollerRef={scrollerRef} />
+        {/* <ScrollShadow wrapperRef={wrapperRef} scrollerRef={scrollerRef} /> */}
       </div>
       <div className={styles.buttonContainer}>
         <button className={styles.next}>Next --&gt;</button>
