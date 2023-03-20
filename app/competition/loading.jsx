@@ -1,3 +1,5 @@
+import Skeleton from "../(components)/Competition/Skeleton";
+
 export default function Loading() {
-  return <p>Loading...</p>;
+  return <Skeleton />;
 }
