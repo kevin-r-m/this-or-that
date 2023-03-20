@@ -10,6 +10,11 @@ function ScrollShadow({ wrapperRef, scrollerRef }) {
     const contentScrollHeight =
       scrollerRef.current.scrollHeight - wrapperRef.current.offsetHeight;
 
+    if (contentScrollHeight <= 0) {
+      shadowRef.current.style.opacity = 0;
+      return;
+    }
+
     scrollerRef.current.addEventListener("scroll", function () {
       const currentScroll = this.scrollTop / contentScrollHeight;
       shadowRef.current.style.opacity = 1 - currentScroll;
