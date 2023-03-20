@@ -21,3 +21,15 @@
     }
   }
 }
+
+.formReset {
+  border: none;
+  background-color: import.$placeholder-reset-red;
+  padding: import.em(8) import.em(18);
+  border-radius: import.$global-border-radius;
+  margin-bottom: import.em(16);
+
+  &:active {
+    background-color: import.$placeholder-reset-red-dark;
+  }
+}
