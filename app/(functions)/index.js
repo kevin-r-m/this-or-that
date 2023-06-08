@@ -46,7 +46,8 @@ export function getTodaysDate() {
   return today;
 }
 
-// Helper function for generating today's date
+ /* HELPER FUNCTIONS - NOT EXPORTED */
+// Formats dates in mm/dd/yy format
 function handleDateFormat(date) {
   const dd = String(date.getDate());
   const mm = String(date.getMonth() + 1);
@@ -56,7 +57,7 @@ function handleDateFormat(date) {
   return date;
 }
 
-// Helper function for checking if dates (strings) match
+// Checks if date (valueToCheck) matches today's date (string comparison)
 function checkCookieDate(valueToCheck) {
   const today = getTodaysDate().toString();
   if (today === valueToCheck) {
