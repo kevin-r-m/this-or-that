@@ -1,43 +1,27 @@
 "use client";
 
 import Link from "next/link";
-import { useRef } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
-import styles from "./Nav.module.scss";
+import classnames from "classnames";
 import AnimatedButton from "./AnimatedButton";
+import styles from "./Nav.module.scss";
 
 function Nav() {
+  const [navActive, setNavActive] = useState(false);
   const pathname = usePathname();
-  const navMenuRef = useRef();
-  const animatedButtonRef = useRef();
-
-  function animateButton(reference) {
-    const { current } = reference;
-    current.classList.toggle(styles.opened);
-    current.setAttribute(
-      "aria-expanded",
-      current.classList.contains(styles.opened)
-    );
-  }
 
   function toggleMenu() {
-    animateButton(animatedButtonRef);
-    const elementClasses = navMenuRef.current.classList;
-    elementClasses.toggle(styles.expanded);
-    if (elementClasses.contains(styles.expanded)) {
-      document.querySelector("body").style.overflow = "hidden";
-      return;
-    }
-    document.querySelector("body").style.overflow = "auto";
+    setNavActive((prevState) => !prevState);
   }
 
   return (
-    <nav className={"container " + styles.nav}>
-      <AnimatedButton buttonRef={animatedButtonRef} toggleMenu={toggleMenu} />
-      <div ref={navMenuRef} className={styles.navItems}>
+    <nav className={classnames("container", styles.nav)}>
+      <AnimatedButton toggleMenu={toggleMenu} navActive={navActive} />
+      <div className={classnames(styles.navItems, navActive && styles.expanded)}>
         <Link
           href="/competition"
-          className={pathname === "/competition" && styles.active}
+          className={(pathname === "/competition" && styles.active)}
           onClick={toggleMenu}
         >
           Today
