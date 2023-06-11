@@ -6,11 +6,11 @@ import styles from "./competitorCard.module.scss";
 import VotingBody from "./VotingBody";
 import CompetitorTransition from "../../../(hooks)/CompetitorTransition";
 
-function CompetitorCard({ competitorName, competitorState }) {
+function CompetitorCard({ competitor, competitorState }) {
   return (
     <>
       <div className={styles.wrapper}>
-        <Headline competitorName={competitorName} />
+        <Headline competitor={competitor} />
 
         <CompetitorTransition
           duration={500}
@@ -19,7 +19,7 @@ function CompetitorCard({ competitorName, competitorState }) {
           appear
         >
           <Body
-            competitorName={competitorName}
+            competitor={competitor}
             competitorState={competitorState}
           />
         </CompetitorTransition>
@@ -30,7 +30,7 @@ function CompetitorCard({ competitorName, competitorState }) {
           className={"body-two"}
           appear
         >
-          <VotingBody competitorName={competitorName} />
+          <VotingBody competitor={competitor} />
         </CompetitorTransition>
       </div>
     </>

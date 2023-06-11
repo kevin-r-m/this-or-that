@@ -1,5 +1,5 @@
 // Function to set cookies
-export function setCookie(cookieName, value, expireDays, votedFor) {
+export function setCookie(cookieName, expireDays, votedFor) {
   if (typeof window !== "undefined") {
     const expireDate = new Date();
     expireDate.setDate(expireDate.getDate() + expireDays);

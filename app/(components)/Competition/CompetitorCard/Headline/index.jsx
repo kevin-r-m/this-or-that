@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./headline.module.scss";
 
-function Headline({ competitorName }) {
+function Headline({ competitor }) {
   return (
     <div className={styles.headline}>
-      <h3>{competitorName}</h3>
+      <h3>{competitor.name}</h3>
     </div>
   );
 }

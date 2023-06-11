@@ -3,8 +3,7 @@ import styles from "./search.module.scss";
 import { useCompetitorListContext } from "../CompetitorListContextProvider";
 
 function Search() {
-  const { formRef, handleCompetitorSearch, handleFormReset } =
-    useCompetitorListContext();
+  const { formRef, handleCompetitorSearch, handleFormReset } = useCompetitorListContext();
 
   return (
     <>

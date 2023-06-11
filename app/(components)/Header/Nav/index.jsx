@@ -31,33 +31,27 @@ function Nav() {
     document.querySelector("body").style.overflow = "auto";
   }
 
-  function handleCompetitorsPath(path) {
-    if (path === "/competitors") {
-      return true;
-    }
-  }
-
   return (
     <nav className={"container " + styles.nav}>
       <AnimatedButton buttonRef={animatedButtonRef} toggleMenu={toggleMenu} />
       <div ref={navMenuRef} className={styles.navItems}>
         <Link
           href="/competition"
-          className={pathname === "/competition" ? styles.active : ""}
+          className={pathname === "/competition" && styles.active}
           onClick={toggleMenu}
         >
           Today
         </Link>
         <Link
           href="/competitors"
-          className={pathname.startsWith("/competitors") ? styles.active : ""}
+          className={pathname.startsWith("/competitors") && styles.active}
           onClick={toggleMenu}
         >
           Competitors
         </Link>
         <Link
           href="/leaderboards"
-          className={pathname === "/leaderboards" ? styles.active : ""}
+          className={pathname === "/leaderboards" && styles.active}
           onClick={toggleMenu}
         >
           Leaderboards

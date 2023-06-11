@@ -32,12 +32,12 @@ function Container() {
           appear
         >
           <CompetitorCard
-            competitorName={competitionState.competitorOne.name}
+            competitor={competitionState.competitorOne}
             competitorState={votingForOne}
             key={competitionState.competitorOne.name}
           />
           <CompetitorCard
-            competitorName={competitionState.competitorTwo.name}
+            competitor={competitionState.competitorTwo}
             competitorState={votingForTwo}
             key={competitionState.competitorTwo.name}
           />

@@ -11,6 +11,7 @@
   &.totalVotes {
     width: fit-content;
     align-self: flex-end;
+    padding-right: import.em(10);
   }
 
   &.winner {

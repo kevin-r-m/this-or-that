@@ -5,7 +5,7 @@ import styles from "./button.module.scss";
 import classNames from "classnames/bind";
 import ButtonSVG from "./ButtonSvg";
 
-function Button({ callback, value, competitorName, vote, confirm, decline }) {
+function Button({ callback, value, competitor, vote, confirm, decline }) {
   const cx = classNames.bind(styles);
   const [active, setActive] = useState(false);
   const [useAnimation, setUseAnimation] = useState(false);
@@ -20,7 +20,7 @@ function Button({ callback, value, competitorName, vote, confirm, decline }) {
     setActive(!active);
 
     if (vote || confirm) {
-      setTimeout(() => callback(competitorName), 500);
+      setTimeout(() => callback(competitor.name), 500);
       return;
     }
     callback();
