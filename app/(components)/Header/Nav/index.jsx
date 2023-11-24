@@ -21,21 +21,21 @@ function Nav() {
       <div className={classnames(styles.navItems, navActive && styles.expanded)}>
         <Link
           href="/competition"
-          className={(pathname === "/competition" && styles.active)}
+          className={(pathname === "/competition" ? styles.active : "")}
           onClick={toggleMenu}
         >
           Today
         </Link>
         <Link
           href="/competitors"
-          className={pathname.startsWith("/competitors") && styles.active}
+          className={pathname.startsWith("/competitors") ? styles.active : ""}
           onClick={toggleMenu}
         >
           Competitors
         </Link>
         <Link
           href="/leaderboards"
-          className={pathname === "/leaderboards" && styles.active}
+          className={pathname === "/leaderboards" ? styles.active : ""}
           onClick={toggleMenu}
         >
           Leaderboards

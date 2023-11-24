@@ -1,11 +1,11 @@
 @use "../../../\(styles\)/import.scss";
 
 .image {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
 
   img {
-    position: relative !important;
     border-radius: import.$global-border-radius;
   }
 }

@@ -74,7 +74,7 @@ export function CompetitionContextProvider({ children }) {
 
   function handleVotingConfirmation(key) {
     const expireDays = 15;
-    setCookie(cookieName, true, expireDays, key);
+    setCookie(cookieName, expireDays, key);
     setVotingState((prevState) => ({
       ...prevState,
       votedFor: key,
