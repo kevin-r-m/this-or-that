@@ -4,7 +4,7 @@ import styles from "./image.module.scss";
 function NewImage({ source, alt }) {
   return (
     <div className={styles.image}>
-      <Image src={source} alt={alt} fill />
+      <Image src={source} alt={alt} fill priority />
     </div>
   );
 }
