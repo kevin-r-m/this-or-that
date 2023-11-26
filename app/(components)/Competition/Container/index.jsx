@@ -20,12 +20,10 @@ function Container() {
           <CompetitorCard
             competitor={competitionState.competitorOne}
             competitorState={votingForOne}
-            key={competitionState.competitorOne.name}
           />
           <CompetitorCard
             competitor={competitionState.competitorTwo}
             competitorState={votingForTwo}
-            key={competitionState.competitorTwo.name}
           />
         </>
       }
