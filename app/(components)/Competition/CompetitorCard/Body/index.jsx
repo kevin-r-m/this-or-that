@@ -7,7 +7,7 @@ import styles from "./body.module.scss";
 import placeholderImage from "/public/images/placeholder-image.webp";
 import { useCompetitionContext } from "../../CompetitionContextProvider";
 
-function Body({ competitor, competitorState }) {
+function Body({ competitor }) {
   const { handleVoting } = useCompetitionContext();
 
   return (
@@ -22,7 +22,6 @@ function Body({ competitor, competitorState }) {
           value="Vote"
           vote
           competitor={competitor}
-          competitorState={competitorState}
         />
       </div>
     </div>
