@@ -1,6 +1,5 @@
 import styles from "./datarow.module.scss";
 import classNames from "classnames/bind";
-import Image from "next/image";
 
 function DataRow({ content, winner, loser, totalVotes, votes, ...props }) {
   const cx = classNames.bind(styles);

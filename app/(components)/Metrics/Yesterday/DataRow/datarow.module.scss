@@ -15,12 +15,36 @@
   }
 
   &.winner {
+    --winner-glow: #f4f48f;
+
     &::before {
       content: "";
       position: absolute;
-      height: 10px;
-      width: 10px;
-      background-image: url("/app/\(bg-images\)/trophy.svg");
+      height: 26px;
+      width: 26px;
+      background-image: url("/images/trophy.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      right: -7px;
+      top: -10px;
+      animation: rotate 2s infinite;
+      box-shadow: 0px 0px 22px 10px var(--winner-glow);
+      background-color: var(--winner-glow);
     }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(45deg);
+    }
+
+    50% {
+      transform: rotate(-45deg);
+    }
+
+    100% {
+      transform: rotate(45deg);
+    }
+    
   }
 }
