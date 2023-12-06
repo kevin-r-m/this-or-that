@@ -7,11 +7,11 @@ import { useMetricsContext } from "../MetricsContextProvider";
 import styles from "./headline.module.scss";
 
 function Headline() {
-  const { competitionState, handleMetricToggle } = useMetricsContext();
+  const { competitionState, handleMetricToggle, isMetricsExpanded } = useMetricsContext();
 
   return (
     <div className={styles.headlineContainer}>
-      <ExpandButton callback={handleMetricToggle} />
+      <ExpandButton onClick={handleMetricToggle} isActive={isMetricsExpanded} />
       <Today />
       <Text
         tag="h3"
