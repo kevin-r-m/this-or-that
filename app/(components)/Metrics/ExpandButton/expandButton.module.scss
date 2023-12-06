@@ -11,25 +11,11 @@
   top: 0;
 
   img {
-    -webkit-animation: rotateClosed 0.25s forwards;
-    animation: rotateClosed 0.25s forwards;
-  }
+    transform: rotate(0deg);
+    transition: transform .25s;
 
-  //rotate the button
-  @-webkit-keyframes rotateClosed {
-    0% {
-      -webkit-transform: rotate(225deg);
-    }
-    100% {
-      -webkit-transform: rotate(0deg);
-    }
-  }
-  @keyframes rotateClosed {
-    0% {
-      transform: rotate(225deg);
-    }
-    100% {
-      transform: rotate(0deg);
+    &.active {
+      transform: rotate(180deg);
     }
   }
 }
