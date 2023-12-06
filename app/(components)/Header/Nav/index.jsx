@@ -18,7 +18,7 @@ function Nav() {
   return (
     <nav className={classnames("container", styles.nav)}>
       <AnimatedButton toggleMenu={toggleMenu} navActive={navActive} />
-      <div className={classnames(styles.navItems, navActive && styles.expanded)}>
+      <div className={classnames(styles.navItems, navActive ? styles.expanded : undefined)}>
         <Link
           href="/competition"
           className={(pathname === "/competition" ? styles.active : "")}
