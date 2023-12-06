@@ -8,7 +8,20 @@
   padding: import.em(8);
   filter: drop-shadow(0 5px 5px import.$placeholder-drop-shadow);
   overflow: hidden;
-  height: 170px;
+
+  .expandableContent {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: .75s grid-template-rows;
+    
+    div {
+      overflow: hidden;
+    }
+
+    &.expanded {
+      grid-template-rows: 1fr;
+    }
+  }
 
   .metricRow {
     display: flex;

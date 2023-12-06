@@ -8,21 +8,26 @@ import VoteTime from "../VoteTime";
 import Graph from "../Graph";
 import { useMetricsContext } from "../MetricsContextProvider";
 import Yesterday from "../Yesterday";
+import classnames from "classnames";
 
 function Container() {
-  const { metricsRef } = useMetricsContext();
+  const { isMetricsExpanded } = useMetricsContext();
 
   return (
-    <section className={styles.wrapper} ref={metricsRef}>
+    <section className={styles.wrapper}>
       <Headline />
       <div className={styles.metricRow}>
         <Leader />
         <TotalVotes />
         <VoteTime />
       </div>
-      <Graph />
-      <hr />
-      <Yesterday />
+      <div className={classnames(styles.expandableContent, isMetricsExpanded ? styles.expanded : undefined)}>
+        <div>
+          <Graph />
+          <hr />
+          <Yesterday />
+        </div>
+      </div>
     </section>
   );
 }
