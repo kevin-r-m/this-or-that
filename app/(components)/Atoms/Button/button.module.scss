@@ -1,0 +1,14 @@
+@use "../../../\(styles\)/import.scss";
+
+.button {
+    border: none;
+    background-color: none;
+
+    &.circle {
+        width: fit-content;
+        padding: import.em(5);
+        border-radius: 50%;
+        border: none;
+        background-color: import.$placeholder-light-grey;
+    }
+}
