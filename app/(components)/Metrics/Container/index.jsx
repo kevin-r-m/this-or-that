@@ -7,7 +7,6 @@ import TotalVotes from "../TotalVotes";
 import VoteTime from "../VoteTime";
 import Graph from "../Graph";
 import { useMetricsContext } from "../MetricsContextProvider";
-import Yesterday from "../Yesterday";
 import classnames from "classnames";
 
 function Container() {
@@ -24,8 +23,6 @@ function Container() {
       <div className={classnames(styles.expandableContent, isMetricsExpanded ? styles.expanded : undefined)}>
         <div>
           <Graph />
-          <hr />
-          <Yesterday />
         </div>
       </div>
     </section>
