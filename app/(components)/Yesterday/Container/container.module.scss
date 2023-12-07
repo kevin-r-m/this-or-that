@@ -1,0 +1,57 @@
+@use "../../../\(styles\)/import.scss";
+
+.wrapper {
+    margin: 0;
+    background-color: import.$placeholder-grey;
+    display: flex;
+    flex-direction: column;
+    padding: import.em(4);
+    overflow: hidden;
+
+    .closeBtn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        img {
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.tableWrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: .75s grid-template-rows;
+}
+
+.tableContainer {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 0.625rem;
+  justify-content: space-between;
+  column-gap: 10px;
+  overflow: hidden;
+
+  .outcomeContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 0.66;
+
+    .outcomeRow {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: import.em(8);
+        position: relative;
+        top: 6px;
+      }
+    }
+  }
+
+  .votesContainer {
+    flex: 0.33;
+    text-align: center;
+  }
+}
