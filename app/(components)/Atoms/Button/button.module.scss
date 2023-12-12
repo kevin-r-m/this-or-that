@@ -11,4 +11,8 @@
         border: none;
         background-color: import.$placeholder-light-grey;
     }
+
+    &.secondary {
+        background-color: unset;
+    }
 }
