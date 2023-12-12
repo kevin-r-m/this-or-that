@@ -8,16 +8,35 @@
         position: relative;
         margin-top: import.em(20);
 
-        &.active {
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                background-color: import.$placeholder-dark-grey;
-            }
+        --click-position: 50%;
+
+        &::after {
+            width: 0%;
+            transition: all 1s;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: var(--click-position);
+            height: 2px;
+            background-color: import.$placeholder-light-grey;
+        }
+
+
+        &.active::after {
+            animation: expandOutward 1s forwards;
+        }
+    }
+
+    @keyframes expandOutward {
+        from {
+            width: 0%;
+            left: var(--click-position);
+            background-color: import.$placeholder-light-grey;
+        }
+        to {
+            width: 100%;
+            left: 0%;
+            background-color: import.$placeholder-dark-grey;
         }
     }
 }
