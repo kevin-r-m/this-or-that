@@ -3,7 +3,7 @@ import styles from "./skeleton.module.scss";
 function Skeleton() {
   return (
     <>
-      <div className={styles.skeleton}>
+      <div className={`container ${styles.skeleton}`}>
         <section className={styles.metrics}></section>
         <section className={styles.competition}>
           <div className={styles.competitor__one}></div>

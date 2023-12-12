@@ -1,28 +1,11 @@
 @use "../../../\(styles\)/import.scss";
 
 .wrapper {
-    margin: 0;
     background-color: import.$placeholder-grey;
+    border-radius: import.$global-border-radius;
     display: flex;
     flex-direction: column;
-    padding: import.em(4);
-    overflow: hidden;
-
-    .closeBtn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-
-        img {
-            transform: rotate(45deg);
-        }
-    }
-}
-
-.tableWrapper {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: .75s grid-template-rows;
+    padding: import.em(8);
 }
 
 .tableContainer {

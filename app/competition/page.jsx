@@ -1,6 +1,4 @@
-import Metrics from "../(components)/Metrics";
-import Competition from "../(components)/Competition";
-import Yesterday from "../(components)/Yesterday";
+import CompetitionContent from "../(components)/Layout/CompetitionContent";
 
 async function page() {
   await delay(1000);
@@ -9,15 +7,7 @@ async function page() {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
-  return (
-    <>
-      <Yesterday />
-      <div className="container">
-        <Metrics />
-        <Competition />
-      </div>
-    </>
-  );
+  return <CompetitionContent />
 }
 
 export default page;

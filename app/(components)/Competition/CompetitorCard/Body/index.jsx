@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "../../../Global/Image";
+import Image from "../../../Atoms/Image";
 import Button from "../Button";
 import Link from "next/link";
 import styles from "./body.module.scss";
