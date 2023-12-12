@@ -24,7 +24,7 @@ function Nav() {
           className={(pathname === "/competition" ? styles.active : "")}
           onClick={toggleMenu}
         >
-          Today
+          Competition
         </Link>
         <Link
           href="/competitors"
