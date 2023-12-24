@@ -20,31 +20,28 @@
     color: white;
     transform: translate(-4px, -4px);
     overflow: hidden;
-    
+
     span {
       position: relative;
       z-index: 1;
 
     }
-}
+  }
 
-&:active .text {
-  transform: translate(-2px, -2px);
-}
+  &:active .text {
+    transform: translate(-2px, -2px);
+  }
 
-  &.vote {
+  &.vote,
+  &.confirm {
     background-color: #3e7947;
   }
 
-  &.confirm {
-    background-color: #2bba87;
-  }
-
   &.decline {
-    background-color: #ff638487;
+    background-color: #c72f50;
 
-    &:active {
-      background-color: #ff6385d0;
+    .text {
+      background-color: #ff6385;
     }
   }
 }
