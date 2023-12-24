@@ -19,7 +19,7 @@
             bottom: 0;
             left: var(--click-position);
             height: 2px;
-            background-color: import.$placeholder-light-grey;
+            background-color: #4444DD;
         }
 
 
@@ -32,7 +32,7 @@
         from {
             width: 0%;
             left: var(--click-position);
-            background-color: import.$placeholder-light-grey;
+            background-color: #4444DD;
         }
         to {
             width: 100%;
@@ -40,4 +40,9 @@
             background-color: import.$placeholder-dark-grey;
         }
     }
+}
+
+.rule {
+    margin-top: 10px;
+    background-color: #dbdbdb;
 }

@@ -16,18 +16,18 @@
   border-radius: 50%;
   border: none;
   background-color: import.$placeholder-light-grey;
-  transform: translate(-3px, -3px);
+  transform: translate(-4px, -4px);
 
   img {
-    transition: transform 0.5s;
+    transition: transform 0.35s;
   }
 
   &.animated {
-    animation: compress linear 0.5s forwards;
+    animation: compress linear 0.35s forwards;
   }
   
   &.active {
-    animation: expand linear 0.5s forwards;
+    animation: expand linear 0.35s forwards;
 
     img {
       transform: rotate(180deg);
@@ -37,7 +37,7 @@
 
 @keyframes compress {
   0%, 100% {
-    transform: translate(-3px, -3px);
+    transform: translate(-4px, -4px);
   }
   50% {
     transform: translate(-2px, -2px);
@@ -46,7 +46,7 @@
 
 @keyframes expand {
   0%, 100% {
-    transform: translate(-3px, -3px);
+    transform: translate(-4px, -4px);
   }
   50% {
     transform: translate(-2px, -2px);

@@ -59,7 +59,7 @@ function CompetitionContent() {
     return (
         <div className="container">
             <ViewSelector />
-
+            <hr className={styles.rule} />
             {activeView === "yesterday" ? <YesterdayContent /> : <TodayContent />}
         </div>
     );

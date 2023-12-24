@@ -1,6 +1,7 @@
 "use client";
 
 import DataRow from "../DataRow";
+import Goodluck from "../Goodluck";
 import styles from "./container.module.scss";
 import { useYesterdayContext } from "../YesterdayContextProvider";
 
@@ -18,7 +19,8 @@ function Container() {
     return (
         <>
             <section className={styles.wrapper}>
-                <span>Yesterday - {winnerName} won by {voteDifference} votes</span>
+                <h3>Roundup</h3>
+                <p>Yesterday, we saw a fierce match-up between {winnerName} and {loserName}. While it was close, {winnerName} won by {voteDifference} votes. {loserName} gave a good effort, it just was not meant to be.</p>
                 <div className={styles.tableContainer}>
                     <div className={styles.outcomeContainer}>
                         <h3>Competitors</h3>
@@ -37,6 +39,10 @@ function Container() {
                         <DataRow content={totalVotes} votes />
                     </div>
                 </div>
+            </section>
+
+            <section className={styles.goodluckContainer}>
+                <Goodluck loserName={loserName} />
             </section>
         </>
     );
