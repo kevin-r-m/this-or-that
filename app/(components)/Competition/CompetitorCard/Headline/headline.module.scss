@@ -1,0 +1,7 @@
+@use "../../../../\(styles\)/import.scss";
+
+.headline {
+  h3 {
+    margin-bottom: import.em(8);
+  }
+}

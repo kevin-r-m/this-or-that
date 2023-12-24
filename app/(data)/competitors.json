@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Batman",
+        "image": "",
+        "id": 1
+    },
+    {
+        "name": "Iceberg Lettuce",
+        "image": "",
+        "id": 2
+    },
+    {
+        "name": "Peeps",
+        "image": "",
+        "id": 3
+    },
+    {
+        "name": "Apple Pie",
+        "image": "",
+        "id": 4
+    },
+    {
+        "name": "Clocks",
+        "image": "",
+        "id": 5
+    },
+    {
+        "name": "Butterscotch",
+        "image": "",
+        "id": 6
+    },
+    {
+        "name": "Strawberry Milkshake",
+        "image": "",
+        "id": 7
+    },
+    {
+        "name": "Alligators",
+        "image": "",
+        "id": 8
+    }
+]

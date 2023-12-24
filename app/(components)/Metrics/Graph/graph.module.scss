@@ -1,0 +1,12 @@
+@use "../../../\(styles\)/import.scss";
+
+.graphContainer {
+  max-height: 300px;
+  border-radius: import.$global-border-radius;
+  background-color: #ddf9fb;
+  padding: import.em(8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: import.em(10);
+}

@@ -1,0 +1,51 @@
+@use "./functions";
+@use "./colors";
+
+body {
+  padding-bottom: functions.em(30);
+  background-color: #ddf9fb;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    overflow-x: hidden;
+    flex: 1;
+  }
+}
+
+section {
+  margin: functions.em(24) 0;
+}
+
+// keyframe animation to rotate the button
+.rotate {
+  -webkit-animation: rotateOpen 0.25s forwards !important;
+  animation: rotateOpen 0.25s forwards !important;
+}
+
+//rotate the button
+
+@-webkit-keyframes rotateOpen {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(225deg);
+  }
+}
+@keyframes rotateOpen {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(225deg);
+  }
+}
+
+hr {
+  height: 3px;
+  border: none;
+  border-radius: 5px;
+  background-color: colors.$placeholder-dark-grey;
+}

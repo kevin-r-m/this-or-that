@@ -1,0 +1,33 @@
+@use "../../../\(styles\)/import.scss";
+
+.wrapper {
+  background-color: import.$placeholder-grey;
+  padding: import.em(8);
+  border-radius: import.$global-border-radius;
+
+  .scroller {
+    row-gap: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: import.em(8);
+    background-color: import.$placeholder-grey;
+    border-radius: import.$global-border-radius;
+    max-height: 350px;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: import.em(8);
+
+  button {
+    padding: import.em(8);
+    border: none;
+    background-color: import.$placeholder-grey;
+    border-radius: import.$global-border-radius;
+    color: import.$black;
+  }
+}

@@ -1,0 +1,26 @@
+@use "../../../../\(styles\)/import.scss";
+
+.votingBody {
+  background-color: import.$placeholder-light-grey;
+  padding: import.em(8);
+  border-radius: import.$global-border-radius;
+  min-height: 150px;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  p {
+    margin-bottom: import.em(30);
+  }
+
+  .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 20px;
+  }
+}

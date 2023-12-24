@@ -1,0 +1,9 @@
+@use "../../../\(styles\)/import.scss";
+
+.headlineContainer {
+  position: relative;
+  
+  h3 {
+    margin: import.em(8) 0;
+  }
+}
