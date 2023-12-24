@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import styles from "./button.module.scss";
+import styles from "./vote-button.module.scss";
 import classNames from "classnames/bind";
 import ButtonSVG from "./ButtonSvg";
 
-function Button({ callback, value, competitor, vote, confirm, decline }) {
+function VoteButton({ callback, value, competitor, vote, confirm, decline }) {
   const cx = classNames.bind(styles);
   const [active, setActive] = useState(false);
   const [useAnimation, setUseAnimation] = useState(false);
@@ -35,10 +35,12 @@ function Button({ callback, value, competitor, vote, confirm, decline }) {
 
   return (
     <button onClick={handleClick} className={buttonClass}>
-      {useAnimation && <ButtonSVG buttonClicked={active} />}
-      <span className={styles.text}>{value}</span>
+      <div className={styles.text}>
+        {useAnimation && <ButtonSVG buttonClicked={active} />}
+        <span>{value}</span>
+      </div>
     </button>
   );
 }
 
-export default Button;
+export default VoteButton;

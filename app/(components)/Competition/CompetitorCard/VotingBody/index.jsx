@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Button from "../Button";
+import Button from "../VoteButton";
 import styles from "./votingBody.module.scss";
 import { useCompetitionContext } from "../../CompetitionContextProvider";
 
