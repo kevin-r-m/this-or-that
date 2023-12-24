@@ -4,6 +4,17 @@
     display: flex;
     justify-content: space-evenly;
 
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     width: 50%;
+    //     transition: all 1s;
+    //     left: 0;
+    //     height: 100%;
+    //     background-color: #4444DD;
+    //     border-radius: 32px;
+    // }
+
     .selector {
         position: relative;
         margin-top: import.em(20);
@@ -13,7 +24,7 @@
 
         &::after {
             width: 0%;
-            transition: all 1s;
+            transition: all .5s;
             content: "";
             position: absolute;
             bottom: 0;
@@ -24,7 +35,7 @@
 
 
         &.active::after {
-            animation: expandOutward 1s forwards;
+            animation: expandOutward .5s forwards;
         }
     }
 
