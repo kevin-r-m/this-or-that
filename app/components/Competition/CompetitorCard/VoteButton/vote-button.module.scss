@@ -8,6 +8,7 @@
   height: 60px;
   padding: 0;
   color: import.$black;
+  cursor: pointer;
 
   .text {
     display: flex;
@@ -20,6 +21,7 @@
     color: white;
     transform: translate(-4px, -4px);
     overflow: hidden;
+    transition: transform .25s;
 
     span {
       position: relative;
@@ -30,6 +32,10 @@
 
   &:active .text {
     transform: translate(-2px, -2px);
+  }
+
+  &:hover:not(:active) .text {
+    transform: translate(-5px, -5px);
   }
 
   &.vote,
