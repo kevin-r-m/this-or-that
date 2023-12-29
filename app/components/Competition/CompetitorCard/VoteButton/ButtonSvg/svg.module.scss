@@ -1,0 +1,51 @@
+@use "../../../../../\styles/import.scss";
+
+$full_stroke-dashoffset: 471;
+$stroke-dashoffset: 0;
+
+@mixin svg {
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin circle {
+  fill: transparent;
+  stroke-width: 150px;
+  stroke-dasharray: 471;
+  stroke-dashoffset: 471;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  outline: 1px solid transparent;
+}
+@mixin animation-mixin($name, $from, $to) {
+  @keyframes #{$name} {
+    0% {
+      stroke-dashoffset: $from;
+    }
+    100% {
+      stroke-dashoffset: $to;
+    }
+  }
+}
+@include animation-mixin(
+  clock-animation,
+  $full_stroke-dashoffset,
+  $stroke-dashoffset
+);
+
+.svgClockwise {
+  @include svg;
+
+  .clockwiseCircle {
+    @include circle;
+    stroke: #4444dd;
+
+    &.animate {
+      animation: clock-animation 0.4s linear forwards;
+    }
+  }
+}

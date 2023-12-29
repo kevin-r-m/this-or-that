@@ -1,4 +1,4 @@
-import CompetitionContent from "../(components)/Layout/CompetitionContent";
+import CompetitionContent from "../components/Layout/CompetitionContent";
 
 async function page() {
   await delay(1000);

@@ -1,0 +1,46 @@
+@use "../../../\styles/import.scss";
+
+.goodluck {
+    margin-top: import.em(24);
+
+    button {
+        margin-top: 15px;
+        background: #252590;
+        border-radius: import.$global-border-radius;
+        padding: 0;
+        cursor: pointer;
+
+        span {
+            display: block;
+            padding: 12px 42px;
+            border-radius: import.$global-border-radius;
+            background: #4444dd;
+            color: white;
+            transform: translate(-4px, -4px);
+        }
+        
+        &:active span {
+            transform: translate(-2px, -2px);
+        }
+    }
+
+    .wish {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .count {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            gap: 5px;
+            
+            .thumbContainer {
+                width: 30px;
+                height: 30px;
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+}

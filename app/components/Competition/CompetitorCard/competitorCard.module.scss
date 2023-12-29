@@ -1,0 +1,17 @@
+@use "../../../\styles/import.scss";
+
+.wrapper {
+  background-color: #BEE0DC;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: import.em(8);
+  filter: drop-shadow(0 5px 5px import.$placeholder-drop-shadow);
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+
+  &:first-of-type {
+    margin-bottom: import.em(24);
+  }
+}

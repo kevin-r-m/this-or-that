@@ -1,4 +1,4 @@
-import CompetitorsList from "@/app/(components)/CompetitorsList";
+import CompetitorsList from "@/app/components/CompetitorsList";
 
 function page() {
   return (

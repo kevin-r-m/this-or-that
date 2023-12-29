@@ -1,7 +1,7 @@
-import "./(styles)/base.scss";
+import "./styles/base.scss";
 import { Inter } from "next/font/google";
-import Header from "./(components)/Layout/Header";
-import Footer from "./(components)/Layout/Footer";
+import Header from "./components/Layout/Header";
+import Footer from "./components/Layout/Footer";
 
 const inter = Inter({
   weight: ["500", "700"],

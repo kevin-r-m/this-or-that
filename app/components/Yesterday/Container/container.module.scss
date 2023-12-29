@@ -1,0 +1,40 @@
+@use "../../../\styles/import.scss";
+
+.wrapper {
+    background-color: #BEE0DC;
+    border-radius: import.$global-border-radius;
+    display: flex;
+    flex-direction: column;
+    padding: import.em(8);
+}
+
+.tableContainer {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 0.625rem;
+  justify-content: space-between;
+  column-gap: 10px;
+  overflow: hidden;
+
+  .outcomeContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 0.66;
+
+    .outcomeRow {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: import.em(8);
+        position: relative;
+        top: 6px;
+      }
+    }
+  }
+
+  .votesContainer {
+    flex: 0.33;
+    text-align: center;
+  }
+}

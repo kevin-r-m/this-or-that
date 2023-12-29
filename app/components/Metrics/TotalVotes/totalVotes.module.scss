@@ -1,0 +1,10 @@
+@use "../../../\styles/import.scss";
+
+.votesContainer {
+  border-radius: import.$global-border-radius;
+  background-color: #ddf9fb;
+  padding: import.em(8);
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
