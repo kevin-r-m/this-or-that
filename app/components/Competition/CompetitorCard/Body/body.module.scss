@@ -40,7 +40,7 @@
         height: 3px;
         border-radius: import.$global-border-radius;
         background-color: import.$black;
-        transition: width .5s;
+        transition: width .25s;
       }
 
       &:before {
@@ -52,7 +52,7 @@
         height: 14px;
         background-image: url("/images/caret.svg");
         transform: rotate(270deg);
-        transition: right .5s;
+        transition: right .25s;
       }
 
       &:hover,
