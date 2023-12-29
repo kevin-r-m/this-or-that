@@ -15,14 +15,16 @@ function Container() {
   return (
     <section className={styles.wrapper}>
       <Headline />
-      <div className={styles.metricRow}>
-        <Leader />
-        <TotalVotes />
-        <VoteTime />
-      </div>
-      <div className={classnames(styles.expandableContent, isMetricsExpanded ? styles.expanded : undefined)}>
-        <div>
-          <Graph />
+      <div className={styles.mainContent}>
+        <div className={styles.metricRow}>
+          <Leader />
+          <TotalVotes />
+          <VoteTime />
+        </div>
+        <div className={classnames(styles.expandableContent, isMetricsExpanded ? styles.expanded : undefined)}>
+          <div>
+            <Graph />
+          </div>
         </div>
       </div>
     </section>

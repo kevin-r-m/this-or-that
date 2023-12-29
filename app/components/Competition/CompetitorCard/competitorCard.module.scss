@@ -14,4 +14,13 @@
   &:first-of-type {
     margin-bottom: import.em(24);
   }
+
+  @include import.break-point(desktop) {
+    flex: 1;
+    min-height: 230px;
+
+    &:first-of-type {
+      margin-bottom: 0;
+    }
+  }
 }

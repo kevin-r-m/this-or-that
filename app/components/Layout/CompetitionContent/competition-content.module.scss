@@ -1,19 +1,21 @@
 @use '../../../\styles/import.scss';
 
+
+.view {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    @include import.break-point(desktop) {
+        display: block;
+    }
+}
+
 .viewSelector {
     display: flex;
     justify-content: space-evenly;
-
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     width: 50%;
-    //     transition: all 1s;
-    //     left: 0;
-    //     height: 100%;
-    //     background-color: #4444DD;
-    //     border-radius: 32px;
-    // }
 
     .selector {
         position: relative;
@@ -56,4 +58,24 @@
 .rule {
     margin-top: 10px;
     background-color: #dbdbdb;
+}
+
+@include import.break-point(desktop) {
+    .viewsContainer {
+        display: flex;
+        gap: 40px;
+    
+        .yesterdayView {
+            flex: .3;
+        }
+    
+        .todayView {
+            flex: .7;
+        }
+    }
+    
+    .viewSelector,
+    .rule {
+        display: none;
+    }
 }

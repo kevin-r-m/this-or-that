@@ -1,4 +1,12 @@
+@use '../../../styles/import.scss';
+
 .competitorCards {
   position: relative;
   min-height: 430px;
+
+  @include import.break-point(desktop) {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
 }

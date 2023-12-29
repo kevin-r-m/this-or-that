@@ -1,7 +1,7 @@
 @use "../../../\styles/import.scss";
 
 .graphContainer {
-  max-height: 300px;
+  max-height: 250px;
   border-radius: import.$global-border-radius;
   background-color: #ddf9fb;
   padding: import.em(8);
@@ -9,4 +9,8 @@
   align-items: center;
   justify-content: center;
   margin-bottom: import.em(10);
+  
+  @include import.break-point(desktop) {
+    margin-bottom: 0;
+  }
 }
