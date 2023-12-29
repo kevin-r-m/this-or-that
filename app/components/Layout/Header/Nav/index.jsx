@@ -11,6 +11,10 @@ function Nav() {
   const [navActive, setNavActive] = useState(false);
   const pathname = usePathname();
 
+  function closeMenu() {
+    setNavActive(false);
+  }
+
   function toggleMenu() {
     setNavActive((prevState) => !prevState);
   }
@@ -22,21 +26,21 @@ function Nav() {
         <Link
           href="/competition"
           className={(pathname === "/competition" ? styles.active : "")}
-          onClick={toggleMenu}
+          onClick={closeMenu}
         >
           Competition
         </Link>
         <Link
           href="/competitors"
           className={pathname.startsWith("/competitors") ? styles.active : ""}
-          onClick={toggleMenu}
+          onClick={closeMenu}
         >
           Competitors
         </Link>
         <Link
           href="/leaderboards"
           className={pathname === "/leaderboards" ? styles.active : ""}
-          onClick={toggleMenu}
+          onClick={closeMenu}
         >
           Leaderboards
         </Link>

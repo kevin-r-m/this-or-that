@@ -7,6 +7,10 @@
     display: flex;
     padding: 0;
 
+    @include import.break-point(desktop) {
+        display: none;
+    }
+
     .line {
         fill: none;
         stroke: black;

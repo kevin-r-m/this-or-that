@@ -23,6 +23,18 @@
     opacity: 0;
     row-gap: import.em(16);
 
+    @include import.break-point(desktop) {
+      position: relative;
+      opacity: 1;
+      width: unset;
+      height: unset;
+      flex-direction: row;
+      gap: 20px;
+      top: 0;
+      padding: 0;
+      background: unset;
+    }
+
     &::after {
       content: "";
       position: absolute;
