@@ -28,7 +28,7 @@ function CompetitionContent() {
 
     function TodayContent() {
         return (
-            <div className={classnames(styles.view, activeView === "today" ? styles.active : null)}>
+            <div className={classnames(styles.view, styles.todayView, activeView === "today" ? styles.active : null)}>
                 <Metrics />
                 <Competition />
             </div>
@@ -37,7 +37,7 @@ function CompetitionContent() {
 
     function YesterdayContent() {
         return (
-            <div className={classnames(styles.view, activeView === "yesterday" ? styles.active : null)}>
+            <div className={classnames(styles.view, styles.yesterdayView, activeView === "yesterday" ? styles.active : null)}>
                 <Yesterday />
             </div>
         )
@@ -63,12 +63,8 @@ function CompetitionContent() {
         <div className="container">
             <ViewSelector />
             <div className={styles.viewsContainer}>
-                <div className={styles.yesterdayView}>
-                    <YesterdayContent />
-                </div>
-                <div className={styles.todayView}>
-                    <TodayContent />
-                </div>
+                <YesterdayContent />
+                <TodayContent />
             </div>
         </div>
     );

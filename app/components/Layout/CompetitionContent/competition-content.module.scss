@@ -63,7 +63,7 @@
 @include import.break-point(desktop) {
     .viewsContainer {
         display: flex;
-        gap: 40px;
+        gap: 80px;
     
         .yesterdayView {
             flex: .3;
@@ -71,6 +71,18 @@
     
         .todayView {
             flex: .7;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 24px;
+                left: -42px;
+                height: 80%;
+                width: 3px;
+                background: import.$placeholder-dark-grey;
+                border-radius: import.$global-border-radius;
+            }
         }
     }
     
