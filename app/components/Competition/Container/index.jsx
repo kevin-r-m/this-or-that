@@ -7,6 +7,7 @@ import styles from "./container.module.scss";
 
 function Container() {
   const { competitionState, votingForOne, votingForTwo, votingState } = useCompetitionContext();
+  console.log(competitionState);
 
   return (
     <section className={styles.competitorCards}>

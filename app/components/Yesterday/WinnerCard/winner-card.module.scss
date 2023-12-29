@@ -1,0 +1,30 @@
+@use '../../../styles/import.scss';
+
+.wrapper {
+    background-color: #BEE0DC;
+    border-radius: import.$global-border-radius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: import.em(8);
+    filter: drop-shadow(0 5px 5px import.$placeholder-drop-shadow);
+
+    .winnerContent {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        margin-top: 20px;
+
+        .winnerIcon {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-image: url('/images/placeholder-image.webp');
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+}
