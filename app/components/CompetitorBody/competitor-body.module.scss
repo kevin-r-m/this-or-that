@@ -1,5 +1,4 @@
 .image {
-  height: 240px;
-  width: 100%;
-  position: relative;
+  max-height: 240px;
+  aspect-ratio: 16/9;
 }

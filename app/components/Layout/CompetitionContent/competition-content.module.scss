@@ -71,18 +71,6 @@
     
         .todayView {
             flex: .7;
-            position: relative;
-
-            &::before {
-                content: "";
-                position: absolute;
-                top: 24px;
-                left: -42px;
-                height: 80%;
-                width: 3px;
-                background: import.$placeholder-dark-grey;
-                border-radius: import.$global-border-radius;
-            }
         }
     }
     
