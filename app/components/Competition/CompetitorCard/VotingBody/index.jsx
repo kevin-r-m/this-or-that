@@ -12,13 +12,8 @@ function VotingBody({ competitor }) {
     <div className={"voting-body " + styles.votingBody}>
       <p>Alright, confirm your vote for {competitor.name}?</p>
       <div className={styles.buttonsContainer}>
-        <Button
-          competitor={competitor}
-          callback={handleVotingConfirmation}
-          value="Confirm"
-          confirm
-        />
         <Button callback={handleVotingReset} value="Take me back" decline />
+        <Button competitor={competitor} callback={handleVotingConfirmation} value="Confirm" confirm />
       </div>
     </div>
   );
