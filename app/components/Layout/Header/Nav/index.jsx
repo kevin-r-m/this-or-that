@@ -37,13 +37,13 @@ function Nav() {
         >
           Competitors
         </Link>
-        <Link
+        {/* <Link
           href="/leaderboards"
           className={pathname === "/leaderboards" ? styles.active : ""}
           onClick={closeMenu}
         >
           Leaderboards
-        </Link>
+        </Link> */}
       </div>
     </nav>
   );
