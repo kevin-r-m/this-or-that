@@ -7,32 +7,62 @@
     padding-right: 10px;
     color: import.$black;
 
+
     &:after {
         content: "";
         position: absolute;
         right: -10px;
-        width: 16px;
-        top: 56%;
+        top: 50%;
         transform: translateY(-50%);
+        width: 16px;
         height: 16px;
         background-image: url("/images/caret-right-purple.svg");
         background-repeat: no-repeat;
     }
 
+    &.arrowLeft {
+        &:after {
+            background-image: url("/images/caret-left-purple.svg");
+            right: auto;
+            left: -20px;
+        }
+    
+    }
+
+    &.arrowLeft {
+        &:hover,
+        &:active {
+            &:after {
+                animation: pulseLeft 0.25s 8 alternate forwards;
+            }
+        }
+    
+    }
+
     &:hover,
     &:active {
         &:after {
-            animation: pulse 0.25s 8 alternate forwards;
+            animation: pulseRight 0.25s 8 alternate forwards;
         }
     }
 
-    @keyframes pulse {
+    @keyframes pulseRight {
         from {
             right: -10px;
         }
 
         to {
             right: -13px;
+        }
+    }
+
+    @keyframes pulseLeft {
+        from {
+            left: -20px;
+        }
+
+        to {
+            left: -23px;
         }
     }
 }
