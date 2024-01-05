@@ -1,0 +1,43 @@
+@use "../../../styles/import.scss";
+
+.internalLink {
+    padding: 0;
+    text-decoration: none;
+    margin-bottom: import.em(32);
+    position: relative;
+    padding-right: 10px;
+    color: import.$black;
+
+    span {
+        color: import.$black;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        right: -10px;
+        width: 16px;
+        top: 56%;
+        transform: translateY(-50%);
+        height: 16px;
+        background-image: url("/images/caret-right-purple.svg");
+        background-repeat: no-repeat;
+    }
+
+    &:hover,
+    &:active {
+        &:after {
+            animation: pulse 0.25s 8 alternate forwards;
+        }
+    }
+
+    @keyframes pulse {
+        from {
+            right: -10px;
+        }
+
+        to {
+            right: -13px;
+        }
+    }
+}
