@@ -8,7 +8,6 @@ import Button from "../../Atoms/Button";
 import styles from "./competition-content.module.scss";
 import classnames from "classnames";
 
-
 function CompetitionContent() {
     const [activeView, setActiveView] = useState("today");
     const [buttonClickPosition, setButtonClickPosition] = useState(0);
