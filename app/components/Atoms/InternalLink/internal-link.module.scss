@@ -3,14 +3,9 @@
 .internalLink {
     padding: 0;
     text-decoration: none;
-    margin-bottom: import.em(32);
     position: relative;
     padding-right: 10px;
     color: import.$black;
-
-    span {
-        color: import.$black;
-    }
 
     &:after {
         content: "";
