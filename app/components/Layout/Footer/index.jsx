@@ -5,7 +5,7 @@ function Footer() {
     <footer className={styles.footer}>
       <div>
         <p>
-          This or That <br /> 2023
+          This or That <br /> 2024
         </p>
       </div>
     </footer>
