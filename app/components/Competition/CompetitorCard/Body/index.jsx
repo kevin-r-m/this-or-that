@@ -2,10 +2,10 @@
 
 import Image from "../../../Atoms/Image";
 import VoteButton from "../VoteButton";
-import Link from "next/link";
 import styles from "./body.module.scss";
 import placeholderImage from "/public/images/placeholder-image.webp";
 import { useCompetitionContext } from "../../CompetitionContextProvider";
+import { InternalLink } from "@/app/components/Atoms";
 
 function Body({ competitor }) {
   const { handleVoting } = useCompetitionContext();
@@ -16,9 +16,7 @@ function Body({ competitor }) {
         <Image alt="" source={placeholderImage} />
       </div>
       <div className={styles.buttonsContainer}>
-        <Link className={styles.profile} href={`/competitors/${competitor.id}`}>
-          <span>Go to profile</span>
-        </Link>
+        <InternalLink href={`/competitors/${competitor.id}`} value={"Go to profile"}/>
         <VoteButton
           callback={handleVoting}
           value="Vote"
