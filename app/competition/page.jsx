@@ -1,13 +1,10 @@
 import CompetitionContent from "../components/Layout/CompetitionContent";
+import { getCompetition } from "../utils/competitor";
 
 async function page() {
-  await delay(1000);
+  const res = await getCompetition();
 
-  function delay(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-
-  return <CompetitionContent />
+  return <CompetitionContent competitionData={res} />
 }
 
 export default page;
