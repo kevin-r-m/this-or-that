@@ -6,7 +6,7 @@ function WinnerCard({ winnerName }) {
             <h3>Yesterday's Winner</h3>
             <div className={styles.winnerContent}>
                 <div className={styles.winnerIcon}></div>
-                <h3>{winnerName}</h3>
+                <h4>{winnerName}</h4>
             </div>
         </section>
     );
