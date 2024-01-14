@@ -4,7 +4,7 @@ import { getCompetition } from "../services/api/competitor";
 async function page() {
   const res = await getCompetition();
 
-  return <CompetitionContent competitionData={res} />
+  return <CompetitionContent initialData={res.data[0]} />
 }
 
 export default page;

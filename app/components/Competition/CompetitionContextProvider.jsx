@@ -10,10 +10,10 @@ export function useCompetitionContext() {
   return useContext(CompetitionContext);
 }
 
-export function CompetitionContextProvider({ children }) {
+export function CompetitionContextProvider({ children, competitionData }) {
   const [votingForOne, setVotingForOne] = useState(false);
   const [votingForTwo, setVotingForTwo] = useState(false);
-  const [competitionState] = useState(data);
+  const [competitionState] = useState(competitionData);
   const [votingState, setVotingState] = useState({
     votedToday: null,
     votedFor: null,

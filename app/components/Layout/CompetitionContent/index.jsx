@@ -7,8 +7,9 @@ import Competition from "../../Competition";
 import Button from "../../Atoms/Button";
 import styles from "./competition-content.module.scss";
 import classnames from "classnames";
+import { DataContextProvider } from "@/app/services/context/DataContext";
 
-function CompetitionContent() {
+function CompetitionContent({ initialData }) {
     const [activeView, setActiveView] = useState("today");
     const [buttonClickPosition, setButtonClickPosition] = useState(0);
 
@@ -59,13 +60,15 @@ function CompetitionContent() {
     }
 
     return (
-        <div className="container">
-            <ViewSelector />
-            <div className={styles.viewsContainer}>
-                <YesterdayContent />
-                <TodayContent />
+        <DataContextProvider initialData={initialData}>
+            <div className="container">
+                <ViewSelector />
+                <div className={styles.viewsContainer}>
+                    <YesterdayContent />
+                    <TodayContent />
+                </div>
             </div>
-        </div>
+        </DataContextProvider>
     );
 }
 
