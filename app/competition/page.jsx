@@ -1,5 +1,5 @@
 import CompetitionContent from "../components/Layout/CompetitionContent";
-import { getCompetition } from "../utils/competitor";
+import { getCompetition } from "../services/api/competitor";
 
 async function page() {
   const res = await getCompetition();
