@@ -10,8 +10,6 @@ function Container() {
     const { competitionState } = useYesterdayContext();
     const { yesterday } = competitionState;
 
-    console.log(competitionState)
-
     const [winnerName, winnerVotes] = yesterday.winner;
     const [loserName, loserVotes] = yesterday.loser;
 
