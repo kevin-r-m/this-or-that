@@ -13,7 +13,7 @@ function Body({ competitor }) {
   return (
     <div className={styles.body}>
       <div className={styles.imageContainer}>
-        <Image alt="" source={placeholderImage} />
+        <Image alt="" source={competitor.image} />
       </div>
       <div className={styles.buttonsContainer}>
         <InternalLink href={`/competitors/${competitor.id}`} value={"Go to profile"}/>
