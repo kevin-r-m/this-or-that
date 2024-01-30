@@ -2,6 +2,7 @@
 
 .button {
     border: none;
+    position: relative;
 
     &.circle {
         width: fit-content;
@@ -14,5 +15,10 @@
     &.secondary {
         background-color: unset;
         color: import.$black;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
     }
 }
