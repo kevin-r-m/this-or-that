@@ -19,6 +19,7 @@ async function getCompetition() {
             "Content-Type": "application/json",
             "x-api-key": process.env.API_KEY
         },
+        cache: "no-store",
     }
 
     const competitionData = await handleAPIRequest(resource, options);
